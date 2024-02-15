@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мой проект{% endblock %}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    {# отступы по бокам и высоте#}
+<style>
+    /* Стилизация изображений в карточках */
+    .card-img {
+        width: 100%; /* Устанавливаем ширину изображения на 100% от родительского контейнера (карточки) */
+        height: 200px; /* Устанавливаем фиксированную высоту изображения */
+        object-fit: cover; /* Подгоняем изображение под размеры контейнера с сохранением пропорций */
+    }
+    .card {
+        background-color: #343a40; /* Цвет фона карточки */
+        color: #ffffff; /* Цвет текста на карточке */
+    }
+    .card-text {
+        overflow: hidden; /* Скрыть текст, который не помещается в ограниченное пространство */
+        text-overflow: ellipsis; /* Отображать многоточие для обрезанного текста */
+        white-space: nowrap; /* Предотвращаем перенос строк */
+    }
+    /* закругляем карточку и закругляем картинку*/
+    .card {
+        border-radius: 20px;
+    }
+    .card-img {
+        border-radius: 20px 20px 0 0;
+    }
+    .card:hover {
+        transform: scale(1.05); /* Увеличиваем масштаб карточки на 5% при наведении */
+        transition: transform 0.3s ease; /* Добавляем плавный переход */
+    }
+
+</style>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
