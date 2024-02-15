@@ -1,6 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style>
+    /* Стили для увеличения картинок при наведении курсора */
+    .card {
+        overflow: hidden; /* Скрыть контент, выходящий за пределы карточки */
+    }
+
+    .card:hover .card-img {
+        transform: scale(1.03); /* Увеличиваем масштаб картинки на 10% при наведении */
+        transition: transform 0.3s ease; /* Добавляем плавный переход */
+    }
+    .card:hover .card-text {
+    color: #00aaff; /* Голубой цвет */
+}
+    .card:hover .card-title {
+    color: lightgreen; /* Зеленый цвет */
+}
+
+</style>
+
 <div class="container mt-4"> <!-- Добавляем класс mt-4 для создания отступа сверху -->
     <div class="row">
         {% for product in products %}
