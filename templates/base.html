@@ -6,40 +6,39 @@
     <title>{% block title %}Мой проект{% endblock %}</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     {# отступы по бокам и высоте#}
-<style>
-    /* Стилизация изображений в карточках */
-    .card-img {
-        width: 100%; /* Устанавливаем ширину изображения на 100% от родительского контейнера (карточки) */
-        height: 200px; /* Устанавливаем фиксированную высоту изображения */
-        object-fit: cover; /* Подгоняем изображение под размеры контейнера с сохранением пропорций */
+    <style>
+        /* Стилизация изображений в карточках */
+        .card-img {
+            width: 100%; /* Устанавливаем ширину изображения на 100% от родительского контейнера (карточки) */
+            height: 200px; /* Устанавливаем фиксированную высоту изображения */
+            object-fit: cover; /* Подгоняем изображение под размеры контейнера с сохранением пропорций */
+        }
+        .card {
+            background-color: #495057; /* Цвет фона карточки */
+            color: #ffffff; /* Цвет текста на карточке */
+        }
+
+        /* закругляем карточку и закругляем картинку*/
+        .card {
+            border-radius: 20px;
+        }
+        .card-img {
+            border-radius: 20px 20px 0 0;
+        }
+
+        body {
+        background-color: #dedbd3;
+
     }
-    .card {
-        background-color: #495057; /* Цвет фона карточки */
-        color: #ffffff; /* Цвет текста на карточке */
-    }
-    .card-text {
-        overflow: hidden; /* Скрыть текст, который не помещается в ограниченное пространство */
-        text-overflow: ellipsis; /* Отображать многоточие для обрезанного текста */
-        white-space: nowrap; /* Предотвращаем перенос строк */
-    }
-    /* закругляем карточку и закругляем картинку*/
-    .card {
-        border-radius: 20px;
-    }
-    .card-img {
-        border-radius: 20px 20px 0 0;
-    }
-    .card:hover {
-        transform: scale(1.02); /* Увеличиваем масштаб карточки на 5% при наведении */
-        transition: transform 0.2s ease; /* Добавляем плавный переход */
-    }
-    body {
-    background-color: #dedbd3;
-}
-</style>
+            /* Стили для увеличения картинок при наведении курсора */
+        .card {
+            overflow: hidden; /* Скрыть контент, выходящий за пределы карточки */
+        }
+
+    </style>
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+{% block content %}
+{% endblock %}
 </body>
 </html>

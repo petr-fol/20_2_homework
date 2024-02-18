@@ -1,12 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
+<style>
+    .card-img {
+        width: 100%; /* Устанавливаем ширину изображения на 100% от родительского контейнера (карточки) */
+        height: 400px; /* Устанавливаем фиксированную высоту изображения */
+        object-fit: cover; /* Подгоняем изображение под размеры контейнера с сохранением пропорций */
+    }
 
-<div class="container">
-    <div class="row">
-        {% for product in products %}
-        <img src="{{ product.image.url }}" alt="{{ product.name }}">
-        {% endfor %}
+</style>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img">
+                <div class="card-body">
+                    <h1 class="card-title">{{product.name}}</h1>
+                    <h3>{{product.price}} рублей</h3>
+                    <p class="card-text">{{product.description}}</p>
+                    <a href="{% url 'index' %}">
+                        <button class="btn btn-dark">&#129184;</button>
+                    </a>
+                    <a href="{% url 'edit_product' product.id %}">
+                    <button class="btn btn-dark btn-sm float-right">&#9998;</button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
+
