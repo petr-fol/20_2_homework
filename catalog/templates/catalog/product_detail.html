@@ -18,11 +18,14 @@
                     <h1 class="card-title">{{product.name}}</h1>
                     <h3>{{product.price}} рублей</h3>
                     <p class="card-text">{{product.description}}</p>
-                    <a href="{% url 'index' %}">
-                        <button class="btn btn-dark">&#129184;</button>
+                    <a href="{% url 'product_list' %}">
+                        <button class="btn btn-dark">&#129184; Вернуться</button>
                     </a>
-                    <a href="{% url 'edit_product' product.id %}">
-                    <button class="btn btn-dark btn-sm float-right">&#9998;</button>
+                    <a href="{% url 'product_confirm_delete' product.id %}">
+                    <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
+                    </a>
+                    <a href="{% url 'product_form' product.id %}">
+                    <button class="btn btn-dark float-right">Редактировать &#9998;</button>
                     </a>
                 </div>
             </div>

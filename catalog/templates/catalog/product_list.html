@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .fixed-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px; /* Максимально закругляем края */
+        background-color: lightgreen;
+        color: dark;
+        border: none;
+        cursor: pointer;
+        outline: none; /* Убираем рамку при фокусе */
+        transition: width 0.3s ease, border-radius 0.3s ease; /* Добавляем плавный переход для ширины кнопки и радиуса скругления */
+        overflow: hidden; /* Скрываем текст, который может выходить за пределы кнопки */
+        text-overflow: ellipsis; /* Отображаем многоточие для обрезанного текста */
+        display: flex; /* Применяем flexbox */
+        justify-content: center; /* Выравниваем содержимое по центру */
+        align-items: center; /* Выравниваем содержимое по центру */
+    }
+
+    .fixed-button:hover {
+        width: 250px; /* Увеличиваем ширину кнопки при наведении курсора */
+        border-radius: 25px; /* Максимально закругляем края */
+    }
+
+    .fixed-button span {
+        overflow: hidden; /* Скрываем текст, который может выходить за пределы кнопки */
+        text-overflow: ellipsis; /* Отображаем многоточие для обрезанного текста */
+        white-space: nowrap; /* Предотвращаем перенос текста на новую строку */
+        display: inline-block; /* Применяем блочный тип для текста */
+        width: 0; /* Устанавливаем начальную ширину текста на 0 */
+        transition: width 0.3s ease; /* Добавляем плавный переход для ширины текста */
+    }
+
+    .fixed-button:hover span {
+        width: auto; /* Увеличиваем ширину текста до его исходной ширины при наведении курсора */
+    }
+</style>
+
+<div class="container mt-4"> <!-- Добавляем класс mt-4 для создания отступа сверху -->
+    <div class="row">
+        {% for product in products %}
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <a href="{% url 'product_detail' product.id %}"> <!-- Ссылка на страницу с деталями товара -->
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img">
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title">{{ product.name }}</h4>
+                    <h5>{{ product.price }} руб.</h5>
+                    <p class="card-text">{{ product.description | truncatechars:88 }}</p>
+                    <a href="{% url 'product_confirm_delete' product.id %}">
+                        <button class="btn btn-danger btn-sm float-right ml-2">&#128465;</button>
+                    </a>
+                    <a href="{% url 'product_form' product.id %}">
+                        <button class="btn btn-dark btn-sm float-right">&#9998;</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<a href="{% url 'product_create' %}">
+    <button class="fixed-button">&#10133;<span>Добавить товар</span></button>
+</a>
+{% endblock %}

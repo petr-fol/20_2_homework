@@ -1,33 +1,44 @@
+# from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 
+from catalog.forms import ProductForm
 from catalog.models import Product
 
 
-def index(request):
-    context = {'products': Product.objects.all()}
-    return render(request, 'index.html', context)
+class ProductListView(ListView):
+    model = Product
+    template_name = 'product_list.html'
+    context_object_name = 'products'
 
 
-def product_detail(request, product_id):
-    context = {'product': Product.objects.get(id=product_id)}
-    return render(request, 'index2.html', context)
+class ProductDetailView(DetailView):
+    model = Product
+    context_object_name = 'product'
 
 
-def edit_product(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    if request.method == "POST":
-        # Обновляем поля товара с данными из формы
-        product.name = request.POST.get('name')
-        product.price = request.POST.get('price')
-        product.description = request.POST.get('description')
+class ProductCreateView(CreateView):
+    model = Product
+    form_class = ProductForm
+    success_url = '/'
 
-        # Проверяем, было ли отправлено новое изображение
-        if 'image' in request.FILES:
-            product.image = request.FILES['image']
-        product.save()
 
-        # После сохранения товара перенаправляем пользователя на страницу с деталями товара
-        return redirect('product_detail', product_id=product_id)
+class ProductUpdateView(UpdateView):
+    model = Product
+    form_class = ProductForm
+    success_url = '/'
 
-    # Если запрос не методом POST, отображаем форму редактирования товара
-    return render(request, 'edit.html', {'product': product})
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = '/'
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        success_url = self.get_success_url()
+        self.object.delete()
+        return HttpResponseRedirect(success_url)
+
+

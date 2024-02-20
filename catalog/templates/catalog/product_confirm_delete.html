@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .card-img {
+        width: 100%; /* Устанавливаем ширину изображения на 100% от родительского контейнера (карточки) */
+        height: 400px; /* Устанавливаем фиксированную высоту изображения */
+        object-fit: cover; /* Подгоняем изображение под размеры контейнера с сохранением пропорций */
+    }
+
+    .delete-form {
+        display: inline-block; /* Делаем форму в виде блока, чтобы кнопка удаления была на той же строке */
+    }
+
+</style>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img">
+                <div class="card-body">
+                    <h1 class="card-title">{{product.name}}</h1>
+                    <h3>{{product.price}} рублей</h3>
+                    <div class="text-right"> <!-- Добавляем класс text-right для выравнивания содержимого справа -->
+                        <a href="{% url 'product_list' %}">
+                            <button class="btn btn-dark">&#129184; Отмена</button>
+                        </a>
+                        <form class="delete-form" method="post" action="{% url 'product_confirm_delete' product.id %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="_method" value="delete">
+                            <button type="submit" class="btn btn-danger">Подтвердить удаление &#128465;</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
