@@ -6,7 +6,7 @@ class Product(models.Model):
     description = models.TextField(verbose_name='Описание')
     price = models.IntegerField(default=0, verbose_name='Цена')
     image = models.ImageField(upload_to='images', null=True, blank=True, verbose_name='Изображение', default='images/default.jpg')
-    category = models.ForeignKey('catalog.Category', on_delete=models.CASCADE, verbose_name='Категория', default='Продукты')
+    category = models.ForeignKey('catalog.Category', on_delete=models.CASCADE, verbose_name='Категория', null=True)
 
     class Meta:
         verbose_name = 'Товар'
