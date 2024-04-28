@@ -2,70 +2,55 @@
 
 {% block content %}
 <style>
-    .fixed-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        border-radius: 25px; /* Максимально закругляем края */
-        background-color: lightgreen;
-        color: dark;
-        border: none;
-        cursor: pointer;
-        outline: none; /* Убираем рамку при фокусе */
-        transition: width 0.3s ease, border-radius 0.3s ease; /* Добавляем плавный переход для ширины кнопки и радиуса скругления */
-        overflow: hidden; /* Скрываем текст, который может выходить за пределы кнопки */
-        text-overflow: ellipsis; /* Отображаем многоточие для обрезанного текста */
-        display: flex; /* Применяем flexbox */
-        justify-content: center; /* Выравниваем содержимое по центру */
-        align-items: center; /* Выравниваем содержимое по центру */
+    /* Стили для карточек товаров */
+    .card {
+        background-color: #ffffff; /* Белый фон карточки */
+        border-radius: 10px; /* Скругление углов карточки */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень для карточки */
+        transition: all 0.3s ease; /* Плавное изменение состояния при наведении */
     }
-
-    .fixed-button:hover {
-        width: 250px; /* Увеличиваем ширину кнопки при наведении курсора */
-        border-radius: 25px; /* Максимально закругляем края */
+    .card:hover {
+        transform: translateY(-5px); /* Небольшое поднятие карточки при наведении */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Более выразительная тень при наведении */
     }
-
-    .fixed-button span {
-        overflow: hidden; /* Скрываем текст, который может выходить за пределы кнопки */
-        text-overflow: ellipsis; /* Отображаем многоточие для обрезанного текста */
-        white-space: nowrap; /* Предотвращаем перенос текста на новую строку */
-        display: inline-block; /* Применяем блочный тип для текста */
-        width: 0; /* Устанавливаем начальную ширину текста на 0 */
-        transition: width 0.3s ease; /* Добавляем плавный переход для ширины текста */
+    /* Стили для изображений в карточке */
+    .card-img-top {
+        border-top-left-radius: 10px; /* Скругление верхнего левого угла изображения */
+        border-top-right-radius: 10px; /* Скругление верхнего правого угла изображения */
+        object-fit: cover; /* Изображение заполняет всю площадь, сохраняя пропорции */
+        height: 200px; /* Фиксированная высота изображения */
     }
-
-    .fixed-button:hover span {
-        width: auto; /* Увеличиваем ширину текста до его исходной ширины при наведении курсора */
+    /* Стили для заголовка карточки */
+    .card-title {
+        color: #333333; /* Цвет текста заголовка */
+        font-weight: bold; /* Жирный шрифт */
+    }
+    /* Стили для цены карточки */
+    .card-price {
+        color: #007bff; /* Цвет текста цены */
+        font-size: 20px; /* Размер текста цены */
+        font-weight: bold; /* Жирный шрифт */
     }
 </style>
-
-<div class="container mt-4"> <!-- Добавляем класс mt-4 для создания отступа сверху -->
-    <div class="row">
-        {% for product in products %}
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card">
-                <a href="{% url 'product_detail' product.id %}"> <!-- Ссылка на страницу с деталями товара -->
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img">
-                </a>
-                <div class="card-body">
-                    <h4 class="card-title">{{ product.name }}</h4>
-                    <h5>{{ product.price }} руб.</h5>
-                    <p class="card-text">{{ product.description | truncatechars:88 }}</p>
-                    <a href="{% url 'product_confirm_delete' product.id %}">
-                        <button class="btn btn-danger btn-sm float-right ml-2">&#128465;</button>
-                    </a>
-                    <a href="{% url 'product_form' product.id %}">
-                        <button class="btn btn-dark btn-sm float-right">&#9998;</button>
-                    </a>
+<div class="row">
+    {% for product in products %}
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+            <a href="{% url 'product_detail' slug=product.slug %}">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top">
+            </a>
+            <div class="card-body">
+                <h4 class="card-title">{{ product.name }}</h4>
+                <h5 class="card-price">{{ product.price }} руб.</h5>
+                <p class="card-text">{{ product.description|truncatechars:88 }}</p>
+                <div class="btn-group">
+                    <a href="{% url 'product_form' slug=product.slug %}"
+                       class="btn btn-primary btn-sm">&#9998;</a>
+                    <a href="{% url 'product_confirm_delete' pk=product.pk %}" class="btn btn-danger btn-sm">&#128465;</a>
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>
-<a href="{% url 'product_create' %}">
-    <button class="fixed-button">&#10133;<span>Добавить товар</span></button>
-</a>
 {% endblock %}

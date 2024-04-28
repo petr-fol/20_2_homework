@@ -5,40 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Мой проект{% endblock %}</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    {# отступы по бокам и высоте#}
     <style>
-        /* Стилизация изображений в карточках */
-        .card-img {
-            width: 100%; /* Устанавливаем ширину изображения на 100% от родительского контейнера (карточки) */
-            height: 200px; /* Устанавливаем фиксированную высоту изображения */
-            object-fit: cover; /* Подгоняем изображение под размеры контейнера с сохранением пропорций */
+        /* Добавляем стили для шапки */
+        .header {
+            background-color: #007bff; /* Цвет фона шапки */
+            padding: 10px 0; /* Вертикальные отступы внутри шапки */
+            color: #ffffff; /* Цвет текста шапки */
         }
-        .card {
-            background-color: #495057; /* Цвет фона карточки */
-            color: #ffffff; /* Цвет текста на карточке */
+        /* Стили для кнопок в шапке */
+        .header-buttons .btn {
+            margin-right: 10px; /* Отступ между кнопками */
         }
-
-        /* закругляем карточку и закругляем картинку*/
-        .card {
-            border-radius: 20px;
+        /* Стили для кнопки "Добавить товар" */
+        .fixed-button {
+            position: fixed; /* Фиксированная позиция */
+            bottom: 20px; /* Отступ от нижнего края */
+            right: 20px; /* Отступ от правого края */
+            z-index: 1000; /* Высокий z-index, чтобы кнопка была поверх других элементов */
         }
-        .card-img {
-            border-radius: 20px 20px 0 0;
-        }
-
-        body {
-        background-color: #dedbd3;
-
-    }
-            /* Стили для увеличения картинок при наведении курсора */
-        .card {
-            overflow: hidden; /* Скрыть контент, выходящий за пределы карточки */
-        }
-
     </style>
 </head>
 <body>
-{% block content %}
-{% endblock %}
+<div class="header">
+    <div class="container">
+        <div class="header-buttons">
+            <a href="{% url 'product_list' %}" class="btn btn-primary">Товары</a>
+            <a href="{% url 'product_list' %}" class="btn btn-primary">Блог</a>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    {% block content %}
+    {% endblock %}
+</div>
+<a href="{% url 'product_create' %}" class="fixed-button btn btn-primary">&#10133; Добавить товар</a>
 </body>
 </html>

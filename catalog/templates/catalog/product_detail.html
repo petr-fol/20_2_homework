@@ -21,10 +21,10 @@
                     <a href="{% url 'product_list' %}">
                         <button class="btn btn-dark">&#129184; Вернуться</button>
                     </a>
-                    <a href="{% url 'product_confirm_delete' product.id %}">
+                    <a href="{% url 'product_confirm_delete' pk=product.pk %}">
                     <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
                     </a>
-                    <a href="{% url 'product_form' product.id %}">
+                    <a href="{% url 'product_form' slug=product.slug %}">
                     <button class="btn btn-dark float-right">Редактировать &#9998;</button>
                     </a>
                 </div>

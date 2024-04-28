@@ -25,7 +25,7 @@
                         <a href="{% url 'product_list' %}">
                             <button class="btn btn-dark">&#129184; Отмена</button>
                         </a>
-                        <form class="delete-form" method="post" action="{% url 'product_confirm_delete' product.id %}">
+                        <form class="delete-form" method="post" action="{% url 'product_confirm_delete' pk=product.pk %}">
                             {% csrf_token %}
                             <input type="hidden" name="_method" value="delete">
                             <button type="submit" class="btn btn-danger">Подтвердить удаление &#128465;</button>
