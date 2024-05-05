@@ -1,4 +1,5 @@
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 from blog.forms import MessageForm
 from blog.models import Message
@@ -8,6 +9,10 @@ class MessageListView(ListView):
     model = Message
     template_name = 'product_list.html'
     context_object_name = 'messages'
+
+    def get_queryset(self):
+        # Получаем только опубликованные записи
+        return Message.objects.filter(is_published=True)
 
 
 class MessageDetailView(DetailView):
@@ -26,18 +31,18 @@ class MessageDetailView(DetailView):
 class MessageCreateView(CreateView):
     model = Message
     form_class = MessageForm
-    success_url = '/'
+    success_url = reverse_lazy('message_list')
 
 
 class MessageUpdateView(UpdateView):
     model = Message
     form_class = MessageForm
-    success_url = '/'
+    success_url = reverse_lazy('message_detail')
 
 
 class MessageDeleteView(DeleteView):
     model = Message
-    success_url = '/'
+    success_url = reverse_lazy('message_list')  # Перенаправление на страницу блога после удаления
 
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
