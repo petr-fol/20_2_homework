@@ -42,6 +42,7 @@
             <div class="card-body">
                 <h4 class="card-title">{{ message.title }}</h4>
                 <p class="card-text">{{ message.description|truncatechars:88 }}</p>
+                <p class="card-text">{{ message.views}}&#x1F441; </p>
                 <div class="btn-group">
                     <a href="{% url 'message_form' slug=message.slug %}"
                        class="btn btn-primary btn-sm">&#9998;</a>

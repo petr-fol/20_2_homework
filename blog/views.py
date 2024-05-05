@@ -14,6 +14,14 @@ class MessageDetailView(DetailView):
     model = Message
     context_object_name = 'message'
 
+    def get_object(self, queryset=None):
+        obj = super().get_object(queryset=queryset)
+        # Увеличиваем счетчик просмотров только если запись опубликована
+        if obj.is_published:
+            obj.views += 1
+            obj.save()
+        return obj
+
 
 class MessageCreateView(CreateView):
     model = Message
