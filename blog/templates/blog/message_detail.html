@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .card-img {
+        width: 100%; /* Устанавливаем ширину изображения на 100% от родительского контейнера (карточки) */
+        height: 400px; /* Устанавливаем фиксированную высоту изображения */
+        object-fit: cover; /* Подгоняем изображение под размеры контейнера с сохранением пропорций */
+    }
+
+</style>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <img src="{{ message.image.url }}" alt="{{ message.title }}" class="card-img">
+                <div class="card-body">
+                    <h1 class="card-title">{{message.title}}</h1>
+                    <p class="card-text">{{message.description}}</p>
+                    <a href="{% url 'message_list' %}">
+                        <button class="btn btn-dark">&#129184; Вернуться</button>
+                    </a>
+                    <a href="{% url 'message_confirm_delete' pk=message.pk %}">
+                    <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
+                    </a>
+                    <a href="{% url 'message_form' slug=message.slug %}">
+                    <button class="btn btn-dark float-right">Редактировать &#9998;</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -33,7 +33,7 @@ class Message(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title.value_to_string(self), separator='-')
+            self.slug = slugify(self.title, separator='-')
         super().save()
 
     def __str__(self):

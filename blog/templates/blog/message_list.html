@@ -33,20 +33,19 @@
     }
 </style>
 <div class="row">
-    {% for product in products %}
+    {% for message in messages %}
     <div class="col-lg-4 col-md-6 mb-4">
         <div class="card">
             <a href="{% url 'message_detail' slug=message.slug %}">
-                <img src="{{ message.image.url }}" alt="{{ message.name }}" class="card-img-top">
+                <img src="{{ message.image.url }}" alt="{{ message.title }}" class="card-img-top">
             </a>
             <div class="card-body">
-                <h4 class="card-title">{{ message.name }}</h4>
-                <h5 class="card-price">{{ message.price }} руб.</h5>
+                <h4 class="card-title">{{ message.title }}</h4>
                 <p class="card-text">{{ message.description|truncatechars:88 }}</p>
                 <div class="btn-group">
                     <a href="{% url 'message_form' slug=message.slug %}"
                        class="btn btn-primary btn-sm">&#9998;</a>
-                    <a href="{% url 'message_confirm_delete' pk=product.pk %}" class="btn btn-danger btn-sm">&#128465;</a>
+                    <a href="{% url 'message_confirm_delete' pk=message.pk %}" class="btn btn-danger btn-sm">&#128465;</a>
                 </div>
             </div>
         </div>

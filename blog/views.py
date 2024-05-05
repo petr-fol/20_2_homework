@@ -7,12 +7,12 @@ from blog.models import Message
 class MessageListView(ListView):
     model = Message
     template_name = 'product_list.html'
-    context_object_name = 'products'
+    context_object_name = 'messages'
 
 
 class MessageDetailView(DetailView):
     model = Message
-    context_object_name = 'product'
+    context_object_name = 'message'
 
 
 class MessageCreateView(CreateView):
