@@ -12,14 +12,17 @@
             padding: 10px 0; /* Вертикальные отступы внутри шапки */
             color: #ffffff; /* Цвет текста шапки */
         }
-        /* Стили для кнопок в шапке */
-        .header-buttons .btn {
-            margin-right: 10px; /* Отступ между кнопками */
-        }
         /* Стили для кнопки "Добавить товар" */
         .fixed-button {
             position: fixed; /* Фиксированная позиция */
             bottom: 20px; /* Отступ от нижнего края */
+            right: 20px; /* Отступ от правого края */
+            z-index: 1000; /* Высокий z-index, чтобы кнопка была поверх других элементов */
+        }
+        /* Стили для второй кнопки */
+        .fixed-button-second {
+            position: fixed; /* Фиксированная позиция */
+            bottom: 70px; /* Отступ от нижнего края */
             right: 20px; /* Отступ от правого края */
             z-index: 1000; /* Высокий z-index, чтобы кнопка была поверх других элементов */
         }
@@ -30,7 +33,7 @@
     <div class="container">
         <div class="header-buttons">
             <a href="{% url 'product_list' %}" class="btn btn-primary">Товары</a>
-            <a href="{% url 'product_list' %}" class="btn btn-primary">Блог</a>
+            <a href="{% url 'message_list' %}" class="btn btn-primary">Блог</a>
         </div>
     </div>
 </div>
@@ -38,6 +41,7 @@
     {% block content %}
     {% endblock %}
 </div>
-<a href="{% url 'product_create' %}" class="fixed-button btn btn-primary">&#10133; Добавить товар</a>
+<a href="{% url 'product_create' %}" class="fixed-button btn btn-primary">&#10133;товар</a>
+<a href="{% url 'message_create' %}" class="fixed-button-second btn btn-danger">&#9993; сообщение</a>
 </body>
 </html>

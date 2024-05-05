@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    /* Стили для карточек товаров */
+    .card {
+        background-color: #ffffff; /* Белый фон карточки */
+        border-radius: 10px; /* Скругление углов карточки */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень для карточки */
+        transition: all 0.3s ease; /* Плавное изменение состояния при наведении */
+    }
+    .card:hover {
+        transform: translateY(-5px); /* Небольшое поднятие карточки при наведении */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Более выразительная тень при наведении */
+    }
+    /* Стили для изображений в карточке */
+    .card-img-top {
+        border-top-left-radius: 10px; /* Скругление верхнего левого угла изображения */
+        border-top-right-radius: 10px; /* Скругление верхнего правого угла изображения */
+        object-fit: cover; /* Изображение заполняет всю площадь, сохраняя пропорции */
+        height: 200px; /* Фиксированная высота изображения */
+    }
+    /* Стили для заголовка карточки */
+    .card-title {
+        color: #333333; /* Цвет текста заголовка */
+        font-weight: bold; /* Жирный шрифт */
+    }
+    /* Стили для цены карточки */
+    .card-price {
+        color: #007bff; /* Цвет текста цены */
+        font-size: 20px; /* Размер текста цены */
+        font-weight: bold; /* Жирный шрифт */
+    }
+</style>
+<div class="row">
+    {% for product in products %}
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+            <a href="{% url 'message_detail' slug=message.slug %}">
+                <img src="{{ message.image.url }}" alt="{{ message.name }}" class="card-img-top">
+            </a>
+            <div class="card-body">
+                <h4 class="card-title">{{ message.name }}</h4>
+                <h5 class="card-price">{{ message.price }} руб.</h5>
+                <p class="card-text">{{ message.description|truncatechars:88 }}</p>
+                <div class="btn-group">
+                    <a href="{% url 'message_form' slug=message.slug %}"
+                       class="btn btn-primary btn-sm">&#9998;</a>
+                    <a href="{% url 'message_confirm_delete' pk=product.pk %}" class="btn btn-danger btn-sm">&#128465;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
