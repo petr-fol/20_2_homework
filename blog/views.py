@@ -37,7 +37,9 @@ class MessageCreateView(CreateView):
 class MessageUpdateView(UpdateView):
     model = Message
     form_class = MessageForm
-    success_url = reverse_lazy('message_detail')
+
+    def get_success_url(self):
+        return reverse_lazy('message_detail', kwargs={'slug': self.object.slug})
 
 
 class MessageDeleteView(DeleteView):

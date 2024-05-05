@@ -1,9 +1,8 @@
 # from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404, redirect
+# from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
-
 from catalog.forms import ProductForm
 from catalog.models import Product
 
@@ -22,18 +21,20 @@ class ProductDetailView(DetailView):
 class ProductCreateView(CreateView):
     model = Product
     form_class = ProductForm
-    success_url = '/'
+    success_url = reverse_lazy('product_list')
 
 
 class ProductUpdateView(UpdateView):
     model = Product
     form_class = ProductForm
-    success_url = reverse_lazy('product_detail')
+
+    def get_success_url(self):
+        return reverse_lazy('product_detail', kwargs={'slug': self.object.slug})
 
 
 class ProductDeleteView(DeleteView):
     model = Product
-    success_url = '/'
+    success_url = reverse_lazy('product_list')
 
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
