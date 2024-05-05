@@ -28,7 +28,7 @@ class ProductCreateView(CreateView):
 class ProductUpdateView(UpdateView):
     model = Product
     form_class = ProductForm
-    success_url = '/'
+    success_url = reverse_lazy('product_detail')
 
 
 class ProductDeleteView(DeleteView):
