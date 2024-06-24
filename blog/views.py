@@ -2,7 +2,7 @@ from django.forms import inlineformset_factory
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
-from blog.forms import MessageForm
+from blog.forms import MessageForm, SubjectForm
 from blog.models import Message, Student, Subject
 
 
