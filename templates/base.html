@@ -8,23 +8,71 @@
     <style>
         /* Добавляем стили для шапки */
         .header {
-            background-color: #007bff; /* Цвет фона шапки */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый цвет */
+            backdrop-filter: blur(10px); /* Блюр-фильтр */
+            -webkit-backdrop-filter: blur(10px); /* Блюр-фильтр для Safari */
             padding: 10px 0; /* Вертикальные отступы внутри шапки */
-            color: #ffffff; /* Цвет текста шапки */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Еле заметная тень */
+            color: #000000; /* Цвет текста шапки */
+            z-index: 1000; /* Убедимся, что шапка поверх всех элементов */
+            transition: top 0.3s;
         }
-        /* Стили для кнопки "Добавить товар" */
+
+        /* Стили для кнопок в шапке */
+        .header .btn {
+            background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый цвет для кнопок */
+            border: none; /* Убираем границы кнопок */
+        }
+
+        .header .btn:hover {
+            background-color: rgba(255, 255, 255, 0.9); /* Меняем прозрачность при наведении */
+        }
+
+        /* Стили для кнопки "Добавить" */
         .fixed-button {
             position: fixed; /* Фиксированная позиция */
             bottom: 20px; /* Отступ от нижнего края */
             right: 20px; /* Отступ от правого края */
             z-index: 1000; /* Высокий z-index, чтобы кнопка была поверх других элементов */
+            background-color: rgba(255, 255, 255, 0.7); /* Полупрозрачный белый цвет */
+            border: none; /* Убираем границы кнопки */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); /* Еле заметная тень */
         }
-        /* Стили для второй кнопки */
-        .fixed-button-second {
-            position: fixed; /* Фиксированная позиция */
-            bottom: 70px; /* Отступ от нижнего края */
-            right: 20px; /* Отступ от правого края */
-            z-index: 1000; /* Высокий z-index, чтобы кнопка была поверх других элементов */
+
+        .fixed-button:hover {
+            background-color: rgba(255, 255, 255, 0.9); /* Меняем прозрачность при наведении */
+        }
+
+        /* Скрытие контекстного меню по умолчанию */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            bottom: 50px; /* Отступ от кнопки */
+            right: 0; /* Выравнивание по правому краю */
+            z-index: 1001; /* Высокий z-index, чтобы меню было поверх других элементов */
+            transform: translateY(-100%); /* Позиционирование вверх */
+        }
+
+        /* Показываем меню при наведении на кнопку */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Позиционирование меню вверх и влево */
+        .dropdown-menu {
+            bottom: auto;
+            top: auto; /* Позиционирование вверх от кнопки */
+            right: auto;
+            left: auto;
+        }
+
+        /* Добавим отступы для контента */
+        .container.mt-5 {
+            margin-top: 100px; /* Отступ сверху, чтобы не перекрывать шапку */
         }
     </style>
 </head>
@@ -32,16 +80,41 @@
 <div class="header">
     <div class="container">
         <div class="header-buttons">
-            <a href="{% url 'product_list' %}" class="btn btn-primary">Товары</a>
-            <a href="{% url 'message_list' %}" class="btn btn-primary">Блог</a>
+            <a href="{% url 'product_list' %}" class="btn">Товары</a>
+            <a href="{% url 'message_list' %}" class="btn">Блог</a>
+            <a href="{% url 'student_list' %}" class="btn">Студенты</a>
         </div>
     </div>
 </div>
-<div class="container mt-5">
+<div class="container mt-5 pt-5">
     {% block content %}
     {% endblock %}
 </div>
-<a href="{% url 'product_create' %}" class="fixed-button btn btn-primary">&#10133;товар</a>
-<a href="{% url 'message_create' %}" class="fixed-button-second btn btn-danger">&#9993; сообщение</a>
+<div class="dropdown fixed-button">
+    <button class="btn">&#10133; Добавить</button>
+    <div class="dropdown-menu">
+        <a href="{% url 'product_create' %}" class="dropdown-item">Товар</a>
+        <a href="{% url 'message_create' %}" class="dropdown-item">Сообщение</a>
+        <a href="{% url 'student_create' %}" class="dropdown-item">Студент</a>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // Скрипт для скрытия шапки при прокрутке вниз и показа при прокрутке вверх
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Прокрутка вниз
+            document.querySelector('.header').style.top = '-70px';
+        } else {
+            // Прокрутка вверх
+            document.querySelector('.header').style.top = '0';
+        }
+        lastScrollTop = scrollTop;
+    });
+</script>
 </body>
 </html>

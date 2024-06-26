@@ -8,6 +8,9 @@
         border-radius: 10px; /* Скругление углов карточки */
         box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень для карточки */
         transition: all 0.3s ease; /* Плавное изменение состояния при наведении */
+        position: relative; /* Относительное позиционирование для абсолютного позиционирования кнопок */
+        display: flex; /* Размещаем содержимое карточки внутри flex-контейнера */
+        flex-direction: column; /* Отображаем элементы в столбец */
     }
     .card:hover {
         transform: translateY(-5px); /* Небольшое поднятие карточки при наведении */
@@ -31,6 +34,18 @@
         font-size: 20px; /* Размер текста цены */
         font-weight: bold; /* Жирный шрифт */
     }
+    /* Скрытие кнопок "Редактировать" и "Удалить" по умолчанию */
+    .btn-group {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .card:hover .btn-group {
+        opacity: 1;
+    }
+
 </style>
 <div class="row">
     {% for product in products %}
@@ -45,7 +60,7 @@
                 <p class="card-text">{{ product.description|truncatechars:88 }}</p>
                 <div class="btn-group">
                     <a href="{% url 'product_form' slug=product.slug %}"
-                       class="btn btn-primary btn-sm">&#9998;</a>
+                       class="btn btn-dark btn-sm">&#9998;</a>
                     <a href="{% url 'product_confirm_delete' pk=product.pk %}" class="btn btn-danger btn-sm">&#128465;</a>
                 </div>
             </div>

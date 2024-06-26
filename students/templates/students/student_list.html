@@ -2,7 +2,7 @@
 
 {% block content %}
 <style>
-    /* Стили для карточек сообщений */
+    /* Стили для карточек товаров */
     .card {
         background-color: #ffffff; /* Белый фон карточки */
         border-radius: 10px; /* Скругление углов карточки */
@@ -26,9 +26,11 @@
         color: #333333; /* Цвет текста заголовка */
         font-weight: bold; /* Жирный шрифт */
     }
-    /* Стили для текста в карточке */
-    .card-text {
-        color: #666666; /* Цвет обычного текста */
+    /* Стили для цены карточки */
+    .card-price {
+        color: #007bff; /* Цвет текста цены */
+        font-size: 20px; /* Размер текста цены */
+        font-weight: bold; /* Жирный шрифт */
     }
     /* Скрытие кнопок "Редактировать" и "Удалить" по умолчанию */
     .btn-group {
@@ -43,19 +45,19 @@
     }
 </style>
 <div class="row">
-    {% for message in messages %}
+    {% for student in students %}
     <div class="col-lg-4 col-md-6 mb-4">
         <div class="card">
-            <a href="{% url 'message_detail' slug=message.slug %}">
-                <img src="{{ message.image.url }}" alt="{{ message.title }}" class="card-img-top">
-            </a>
             <div class="card-body">
-                <h4 class="card-title">{{ message.title }}</h4>
-                <p class="card-text">{{ message.description|truncatechars:88 }}</p>
-                <p class="card-text">{{ message.views }} &#x1F441;</p>
+                <a href="{% url 'student_detail' slug=student.slug %}">
+                    <h4 class="card-title">{{ student.name }} {{student.surname|truncatechars:40 }}</h4>
+                </a>
+                <p class="card-text">{{student.age}}</p>
                 <div class="btn-group">
-                    <a href="{% url 'message_form' slug=message.slug %}" class="btn btn-dark btn-sm">&#9998;</a>
-                    <a href="{% url 'message_confirm_delete' pk=message.pk %}" class="btn btn-danger btn-sm">&#128465;</a>
+                    <a href="{% url 'student_form' slug=student.slug %}"
+                       class="btn btn-dark btn-sm">&#9998;</a>
+                    <a href="{% url 'student_confirm_delete' pk=student.pk %}"
+                       class="btn btn-danger btn-sm">&#128465;</a>
                 </div>
             </div>
         </div>
