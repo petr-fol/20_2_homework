@@ -17,6 +17,7 @@ class StudentDetailView(DetailView):
     model = Student
     context_object_name = 'student'
 
+
 class StudentCreateView(CreateView):
     model = Student
     form_class = StudentForm
