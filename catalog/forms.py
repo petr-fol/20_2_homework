@@ -1,9 +1,10 @@
 from django import forms
 
 from catalog.models import Product
+from config.style import StyleFormMixin
 
 
-class ProductForm(forms.ModelForm):
+class ProductForm(StyleFormMixin, forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
