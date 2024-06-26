@@ -1,37 +1,23 @@
 from django.forms import inlineformset_factory
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
-
-from students.models import Student
+from students.forms import StudentForm, SubjectForm
+from students.models import Student, Subject
 
 
 # Create your views here.
-class StudentsListView(ListView):
+class StudentListView(ListView):
     model = Student
     template_name = 'students_list.html'
     context_object_name = 'students'
 
-    def get_queryset(self):
-        # Получаем только опубликованные записи
-        return Student.objects.filter(is_published=True)
 
-
-class StudentsDetailView(DetailView):
+class StudentDetailView(DetailView):
     model = Student
     context_object_name = 'student'
 
-    def get_object(self, queryset=None):
-        obj = super().get_object(queryset=queryset)
-        # Увеличиваем счетчик просмотров только если запись опубликована
-        if obj.is_published:
-            obj.views += 1
-            obj.save()
-        return obj
-
-
-class StudentsCreateView(CreateView):
+class StudentCreateView(CreateView):
     model = Student
     form_class = StudentForm
 
@@ -39,7 +25,7 @@ class StudentsCreateView(CreateView):
         return reverse_lazy('student_detail', kwargs={'slug': self.object.slug})
 
 
-class StudentsUpdateView(UpdateView):
+class StudentUpdateView(UpdateView):
     model = Student
     form_class = StudentForm
 
@@ -66,7 +52,7 @@ class StudentsUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class StudentsDeleteView(DeleteView):
+class StudentDeleteView(DeleteView):
     model = Student
     success_url = reverse_lazy('student_list')  # Перенаправление на страницу блога после удаления
 
