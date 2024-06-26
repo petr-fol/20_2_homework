@@ -11,5 +11,7 @@ urlpatterns = [
     path('edit/<slug:slug>/', ProductUpdateView.as_view(), name='product_form'),
     path('confirm_delete/<pk>/', ProductDeleteView.as_view(), name='product_confirm_delete'),
     path('create/', ProductCreateView.as_view(), name='product_create'),
+
+
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

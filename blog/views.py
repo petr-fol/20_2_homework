@@ -8,7 +8,7 @@ from blog.models import Message, Subject
 
 class MessageListView(ListView):
     model = Message
-    template_name = 'product_list.html'
+    template_name = 'message_list.html'
     context_object_name = 'messages'
 
     def get_queryset(self):
@@ -45,9 +45,9 @@ class MessageUpdateView(UpdateView):
         context_data = super().get_context_data(**kwargs)
         SubjectFormset = inlineformset_factory(Message, Subject, form=SubjectForm, extra=1)
         if self.request.method == 'POST':
-            context_data['formset'] = SubjectFormset(self.request.POST)
+            context_data['formset'] = SubjectFormset(self.request.POST, instance=self.object)
         else:
-            context_data['formset'] = SubjectFormset()
+            context_data['formset'] = SubjectFormset(instance=self.object)
 
         return context_data
 
