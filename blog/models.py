@@ -7,7 +7,7 @@ from slugify import slugify
 # Create your models here.
 class Message(models.Model):
     title = models.CharField(max_length=200, verbose_name='Заголовок')
-    slug = models.SlugField(max_length=200, verbose_name='Ссылка')   # потом сделать через чарфилд
+    slug = models.SlugField(max_length=200, verbose_name='Ссылка', unique=True)   # потом сделать через чарфилд
     description = models.TextField(verbose_name='Описание', null=True, blank=True)
     image = models.ImageField(upload_to='images', null=True, blank=True, verbose_name='Изображение',
                               default='images/default.jpg')
@@ -31,18 +31,3 @@ class Message(models.Model):
 
     def __str__(self):
         return self.title
-
-
-class Subject(models.Model):
-
-        title = models.CharField(max_length=150, verbose_name='название')
-        description = models.TextField(verbose_name='описание')
-
-        student = models.ForeignKey(Message, on_delete=models.CASCADE, verbose_name='студент')
-
-        def __str__(self):
-            return f'{self.title}'
-
-        class Meta:
-            verbose_name = 'предмет'
-            verbose_name_plural = 'предметы'
