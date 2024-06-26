@@ -1,6 +1,8 @@
 import itertools
 
 from django.db import models
+from django.db.models import EmailField
+
 from slugify import slugify
 
 
@@ -11,6 +13,7 @@ class Student(models.Model):
     surname = models.CharField(max_length=200, verbose_name='Фамилия')
     age = models.IntegerField(default=0, verbose_name='Возраст')
     slug = models.SlugField(max_length=200, unique=True, db_index=True, verbose_name='URL')
+    email = EmailField(verbose_name='Email', null=True, blank=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:
