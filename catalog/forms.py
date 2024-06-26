@@ -1,6 +1,8 @@
+from itertools import count
+
 from django import forms
 
-from catalog.models import Product
+from catalog.models import Product, Version
 from config.style import StyleFormMixin
 
 
@@ -33,3 +35,19 @@ class ProductForm(StyleFormMixin, forms.ModelForm):
         if price < 0:
             raise forms.ValidationError("Цена не может быть отрицательной.")
         return price
+
+
+class VersionForm(forms.ModelForm):
+    class Meta:
+        model = Version
+        fields = ['number_of_version', 'current_version']
+
+    def clean_current_version(self):
+        current_version = self.cleaned_data.get('current_version')
+        if current_version:
+            existing_current_version = Version.objects.filter(product=self.instance.product,
+                                                              current_version=True).exclude(id=self.instance.id).first()
+            if existing_current_version:
+                raise forms.ValidationError("Может быть только одна текущая версия.")
+        return current_version
+

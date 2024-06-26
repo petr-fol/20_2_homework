@@ -1,9 +1,9 @@
-# from django.shortcuts import render, get_object_or_404, redirect
+from catalog.forms import ProductForm, VersionForm
+from catalog.models import Product, Version
+from django.forms import inlineformset_factory
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
-from catalog.forms import ProductForm
-from catalog.models import Product
 
 
 class ProductListView(ListView):
@@ -27,6 +27,28 @@ class ProductCreateView(CreateView):
 class ProductUpdateView(UpdateView):
     model = Product
     form_class = ProductForm
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        SubjectFormset = inlineformset_factory(Product, Version, form=VersionForm, extra=1)
+        if self.request.method == 'POST':
+            formset = SubjectFormset(self.request.POST, instance=self.object)
+        else:
+            formset = SubjectFormset(instance=self.object)
+        context_data['formset'] = formset
+        context_data['is_editing'] = True
+        return context_data
+
+    def form_valid(self, form):
+        context = self.get_context_data()
+        formset = context['formset']
+        if formset.is_valid():
+            self.object = form.save()
+            formset.instance = self.object
+            formset.save()
+            return super().form_valid(form)
+        else:
+            return self.render_to_response(self.get_context_data(form=form))
 
     def get_success_url(self):
         return reverse_lazy('product_detail', kwargs={'slug': self.object.slug})
