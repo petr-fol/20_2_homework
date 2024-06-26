@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 from blog.forms import MessageForm, SubjectForm
-from blog.models import Message, Student, Subject
+from blog.models import Message, Subject
 
 
 class MessageListView(ListView):
@@ -43,7 +43,7 @@ class MessageUpdateView(UpdateView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        SubjectFormset = inlineformset_factory(Message, Subject, form=SubjectForm, extra=1)  # ложное подчеркивание
+        SubjectFormset = inlineformset_factory(Message, Subject, form=SubjectForm, extra=1)
         if self.request.method == 'POST':
             context_data['formset'] = SubjectFormset(self.request.POST)
         else:
@@ -62,7 +62,6 @@ class MessageUpdateView(UpdateView):
             formset.save()
 
         return super().form_valid(form)
-
 
 
 class MessageDeleteView(DeleteView):

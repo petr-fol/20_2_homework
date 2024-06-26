@@ -1,3 +1,5 @@
+import itertools
+
 from django.db import models
 from slugify import slugify
 
@@ -34,7 +36,11 @@ class Message(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title, separator='-')
-        super().save()
+            for x in itertools.count(1):
+                if not Message.objects.filter(slug=self.slug).exists():
+                    break
+                self.slug = f'{slugify(self.title)}-{x}'
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
