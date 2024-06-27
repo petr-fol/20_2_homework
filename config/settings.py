@@ -101,7 +101,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = 'ru-RU'
-
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -114,3 +113,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# ниже кастомные команды
+FILE_CHARSET = 'UTF-8'
+DEFAULT_CHARSET = 'utf-8'
+
+# AUTH_USER_MODEL = 'users.User'
