@@ -119,4 +119,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 FILE_CHARSET = 'UTF-8'
 DEFAULT_CHARSET = 'utf-8'
 
-# AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.User'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+# SESSION_COOKIE_PATH = '/'

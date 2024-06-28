@@ -74,6 +74,12 @@
         .container.mt-5 {
             margin-top: 100px; /* Отступ сверху, чтобы не перекрывать шапку */
         }
+        .logout-btn {
+            position: absolute;
+            left: 20px; /* Расстояние от левого края */
+            top: 10px; /* Возможно, вам понадобится настроить вертикальное положение */
+        }
+
     </style>
 </head>
 <body>
@@ -83,6 +89,18 @@
             <a href="{% url 'product_list' %}" class="btn">Товары</a>
             <a href="{% url 'message_list' %}" class="btn">Блог</a>
             <a href="{% url 'student_list' %}" class="btn">Студенты</a>
+            <div class="logout-btn">
+                {% if user.is_authenticated %}
+                <form action="{% url 'users:logout' %}" method="post">
+                    {% csrf_token %}
+                    <a href="{% url 'users:profile' %}" class="btn">Профиль</a>
+                    <button type="submit" class="btn">Выйти</button>
+                </form>
+                {% else %}
+                <a href="{% url 'users:login' %}" class="btn">Войти</a>
+                <a href="{% url 'users:register' %}" class="btn">Регистрация</a>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
