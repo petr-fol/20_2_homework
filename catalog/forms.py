@@ -2,7 +2,7 @@ from itertools import count
 
 from django import forms
 
-from catalog.models import Product, Version
+from catalog.models import Product, ProductVersion
 from config.style import StyleFormMixin
 
 
@@ -10,7 +10,7 @@ class ProductForm(StyleFormMixin, forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
-        exclude = ['slug', 'category', ]  # 'is_published', 'user'
+        exclude = ['slug', 'category', "owner"]  # 'is_published', 'user'
 
     def clean_name(self):
         name = self.cleaned_data.get('name')
@@ -39,13 +39,13 @@ class ProductForm(StyleFormMixin, forms.ModelForm):
 
 class VersionForm(forms.ModelForm):
     class Meta:
-        model = Version
+        model = ProductVersion
         fields = ['number_of_version', 'current_version']
 
     def clean_current_version(self):
         current_version = self.cleaned_data.get('current_version')
         if current_version:
-            existing_current_version = Version.objects.filter(product=self.instance.product,
+            existing_current_version = ProductVersion.objects.filter(product=self.instance.product,
                                                               current_version=True).exclude(id=self.instance.id).first()
             if existing_current_version:
                 raise forms.ValidationError("Может быть только одна текущая версия.")

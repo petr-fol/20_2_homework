@@ -1,5 +1,7 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from catalog.forms import ProductForm, VersionForm
-from catalog.models import Product, Version
+from catalog.models import Product, ProductVersion
 from django.forms import inlineformset_factory
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
@@ -16,9 +18,16 @@ class ProductDetailView(DetailView):
     context_object_name = 'product'
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(CreateView, LoginRequiredMixin):
     model = Product
     form_class = ProductForm
+
+    def form_valid(self, form):
+        product = form.save()
+        user = self.request.user
+        product.owner = user
+        product.save()
+        return super().form_valid(form)
 
     def get_success_url(self):
         return reverse_lazy('product_detail', kwargs={'slug': self.object.slug})
@@ -30,7 +39,7 @@ class ProductUpdateView(UpdateView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        SubjectFormset = inlineformset_factory(Product, Version, form=VersionForm, extra=1)
+        SubjectFormset = inlineformset_factory(Product, ProductVersion, form=VersionForm, extra=1)
         if self.request.method == 'POST':
             formset = SubjectFormset(self.request.POST, instance=self.object)
         else:

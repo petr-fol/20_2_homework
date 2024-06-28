@@ -8,9 +8,11 @@ class Product(models.Model):
     price = models.IntegerField(default=0, verbose_name='Цена')
     image = models.ImageField(upload_to='images', null=True, blank=True, verbose_name='Изображение',
                               default='images/default.jpg')
-    category = models.ForeignKey('catalog.Category', on_delete=models.CASCADE, verbose_name='Категория',
+    category = models.ForeignKey('catalog.ProductCategory', on_delete=models.CASCADE, verbose_name='Категория',
                                  null=True)
     slug = models.SlugField(max_length=200, unique=True, db_index=True, verbose_name='URL')
+    owner = models.ForeignKey('users.User', on_delete=models.SET_NULL, verbose_name='Владелец',
+                              help_text='создатель товара', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Товар'
@@ -25,7 +27,7 @@ class Product(models.Model):
         return f"{self.name} ({self.price})"
 
 
-class Category(models.Model):
+class ProductCategory(models.Model):
     name = models.CharField(max_length=200, verbose_name='Название')
     description = models.TextField(verbose_name='Описание', null=True, blank=True)
 
@@ -37,7 +39,7 @@ class Category(models.Model):
         return self.name
 
 
-class Version(models.Model):
+class ProductVersion(models.Model):
     number_of_version = models.IntegerField(default=0, verbose_name='Номер версии')
     current_version = models.BooleanField(default=False, verbose_name='Текущая версия')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='Товар')
