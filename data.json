@@ -1,593 +1,1426 @@
 [
-  {
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-06-28T17:52:53.062Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "manager",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2024-06-28T17:54:01.189Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2024-06-28T17:56:28.781Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2024-06-28T17:57:07.568Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2024-06-28T17:57:44.373Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2024-06-28T17:58:04.108Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "manager",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2024-06-28T18:03:19.033Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "manager",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2024-06-28T18:04:14.489Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2024-06-28T18:16:35.947Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2024-06-28T18:18:05.620Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "2",
+        "object_repr": "manager1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2024-06-28T18:18:19.154Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"Staff status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2024-06-28T18:21:07.483Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "2",
+        "object_repr": "manager1",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2024-06-28T18:30:43.968Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "manager",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2024-06-28T18:31:34.882Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "3",
+        "object_repr": "manager",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2024-06-28T18:31:44.069Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2024-06-28T21:16:24.138Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "default_user",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2024-06-28T21:16:45.072Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2024-06-28T21:30:40.444Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "3",
+        "object_repr": "folmerpetr31@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2024-06-28T21:31:53.535Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "3",
+        "object_repr": "folmerpetr31@gmail.com",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2024-06-28T21:32:55.746Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "default_user",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2024-06-28T21:55:26.063Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "default_user",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2024-06-28T21:59:08.854Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "5",
+        "object_repr": "moderator",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2024-06-28T21:59:25.293Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "5",
+        "object_repr": "moderator",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2024-06-28T21:59:34.345Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "3",
+        "object_repr": "manager",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2024-06-28T22:01:23.362Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2024-06-28T22:11:55.706Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "default_user",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2024-06-28T22:20:40.463Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "6",
+        "object_repr": "content_manager",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2024-06-28T22:20:58.370Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "folmerpetr21@gmail.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2024-06-28T22:23:56.954Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "default_user",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2024-06-28T22:24:07.706Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "3",
+        "object_repr": "manager",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2024-06-28T22:24:12.779Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "5",
+        "object_repr": "moderator",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2024-06-28T22:24:19.383Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "6",
+        "object_repr": "content_manager",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
     "model": "auth.permission",
     "pk": 1,
     "fields": {
-      "name": "Can add log entry",
-      "content_type": 1,
-      "codename": "add_logentry"
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 2,
     "fields": {
-      "name": "Can change log entry",
-      "content_type": 1,
-      "codename": "change_logentry"
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 3,
     "fields": {
-      "name": "Can delete log entry",
-      "content_type": 1,
-      "codename": "delete_logentry"
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 4,
     "fields": {
-      "name": "Can view log entry",
-      "content_type": 1,
-      "codename": "view_logentry"
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 5,
     "fields": {
-      "name": "Can add permission",
-      "content_type": 2,
-      "codename": "add_permission"
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 6,
     "fields": {
-      "name": "Can change permission",
-      "content_type": 2,
-      "codename": "change_permission"
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 7,
     "fields": {
-      "name": "Can delete permission",
-      "content_type": 2,
-      "codename": "delete_permission"
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 8,
     "fields": {
-      "name": "Can view permission",
-      "content_type": 2,
-      "codename": "view_permission"
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 9,
     "fields": {
-      "name": "Can add group",
-      "content_type": 3,
-      "codename": "add_group"
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 10,
     "fields": {
-      "name": "Can change group",
-      "content_type": 3,
-      "codename": "change_group"
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 11,
     "fields": {
-      "name": "Can delete group",
-      "content_type": 3,
-      "codename": "delete_group"
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 12,
     "fields": {
-      "name": "Can view group",
-      "content_type": 3,
-      "codename": "view_group"
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 13,
     "fields": {
-      "name": "Can add content type",
-      "content_type": 4,
-      "codename": "add_contenttype"
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 14,
     "fields": {
-      "name": "Can change content type",
-      "content_type": 4,
-      "codename": "change_contenttype"
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 15,
     "fields": {
-      "name": "Can delete content type",
-      "content_type": 4,
-      "codename": "delete_contenttype"
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 16,
     "fields": {
-      "name": "Can view content type",
-      "content_type": 4,
-      "codename": "view_contenttype"
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 17,
     "fields": {
-      "name": "Can add session",
-      "content_type": 5,
-      "codename": "add_session"
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 18,
     "fields": {
-      "name": "Can change session",
-      "content_type": 5,
-      "codename": "change_session"
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 19,
     "fields": {
-      "name": "Can delete session",
-      "content_type": 5,
-      "codename": "delete_session"
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 20,
     "fields": {
-      "name": "Can view session",
-      "content_type": 5,
-      "codename": "view_session"
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 21,
     "fields": {
-      "name": "Can add Товар",
-      "content_type": 6,
-      "codename": "add_product"
+        "name": "Can add Товар",
+        "content_type": 6,
+        "codename": "add_product"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 22,
     "fields": {
-      "name": "Can change Товар",
-      "content_type": 6,
-      "codename": "change_product"
+        "name": "Can change Товар",
+        "content_type": 6,
+        "codename": "change_product"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 23,
     "fields": {
-      "name": "Can delete Товар",
-      "content_type": 6,
-      "codename": "delete_product"
+        "name": "Can delete Товар",
+        "content_type": 6,
+        "codename": "delete_product"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 24,
     "fields": {
-      "name": "Can view Товар",
-      "content_type": 6,
-      "codename": "view_product"
+        "name": "Can view Товар",
+        "content_type": 6,
+        "codename": "view_product"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 25,
     "fields": {
-      "name": "Can add Категория",
-      "content_type": 7,
-      "codename": "add_productcategory"
+        "name": "Can add Категория",
+        "content_type": 7,
+        "codename": "add_productcategory"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 26,
     "fields": {
-      "name": "Can change Категория",
-      "content_type": 7,
-      "codename": "change_productcategory"
+        "name": "Can change Категория",
+        "content_type": 7,
+        "codename": "change_productcategory"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 27,
     "fields": {
-      "name": "Can delete Категория",
-      "content_type": 7,
-      "codename": "delete_productcategory"
+        "name": "Can delete Категория",
+        "content_type": 7,
+        "codename": "delete_productcategory"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 28,
     "fields": {
-      "name": "Can view Категория",
-      "content_type": 7,
-      "codename": "view_productcategory"
+        "name": "Can view Категория",
+        "content_type": 7,
+        "codename": "view_productcategory"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 29,
     "fields": {
-      "name": "Can add Версия",
-      "content_type": 8,
-      "codename": "add_productversion"
+        "name": "Can add Версия",
+        "content_type": 8,
+        "codename": "add_productversion"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 30,
     "fields": {
-      "name": "Can change Версия",
-      "content_type": 8,
-      "codename": "change_productversion"
+        "name": "Can change Версия",
+        "content_type": 8,
+        "codename": "change_productversion"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 31,
     "fields": {
-      "name": "Can delete Версия",
-      "content_type": 8,
-      "codename": "delete_productversion"
+        "name": "Can delete Версия",
+        "content_type": 8,
+        "codename": "delete_productversion"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 32,
     "fields": {
-      "name": "Can view Версия",
-      "content_type": 8,
-      "codename": "view_productversion"
+        "name": "Can view Версия",
+        "content_type": 8,
+        "codename": "view_productversion"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 33,
     "fields": {
-      "name": "Can add Сообщение",
-      "content_type": 9,
-      "codename": "add_message"
+        "name": "Can add Сообщение",
+        "content_type": 9,
+        "codename": "add_message"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 34,
     "fields": {
-      "name": "Can change Сообщение",
-      "content_type": 9,
-      "codename": "change_message"
+        "name": "Can change Сообщение",
+        "content_type": 9,
+        "codename": "change_message"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 35,
     "fields": {
-      "name": "Can delete Сообщение",
-      "content_type": 9,
-      "codename": "delete_message"
+        "name": "Can delete Сообщение",
+        "content_type": 9,
+        "codename": "delete_message"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 36,
     "fields": {
-      "name": "Can view Сообщение",
-      "content_type": 9,
-      "codename": "view_message"
+        "name": "Can view Сообщение",
+        "content_type": 9,
+        "codename": "view_message"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 37,
     "fields": {
-      "name": "Can add Студент",
-      "content_type": 10,
-      "codename": "add_student"
+        "name": "Can add Студент",
+        "content_type": 10,
+        "codename": "add_student"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 38,
     "fields": {
-      "name": "Can change Студент",
-      "content_type": 10,
-      "codename": "change_student"
+        "name": "Can change Студент",
+        "content_type": 10,
+        "codename": "change_student"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 39,
     "fields": {
-      "name": "Can delete Студент",
-      "content_type": 10,
-      "codename": "delete_student"
+        "name": "Can delete Студент",
+        "content_type": 10,
+        "codename": "delete_student"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 40,
     "fields": {
-      "name": "Can view Студент",
-      "content_type": 10,
-      "codename": "view_student"
+        "name": "Can view Студент",
+        "content_type": 10,
+        "codename": "view_student"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 41,
     "fields": {
-      "name": "Can add предмет",
-      "content_type": 11,
-      "codename": "add_subject"
+        "name": "Can add предмет",
+        "content_type": 11,
+        "codename": "add_subject"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 42,
     "fields": {
-      "name": "Can change предмет",
-      "content_type": 11,
-      "codename": "change_subject"
+        "name": "Can change предмет",
+        "content_type": 11,
+        "codename": "change_subject"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 43,
     "fields": {
-      "name": "Can delete предмет",
-      "content_type": 11,
-      "codename": "delete_subject"
+        "name": "Can delete предмет",
+        "content_type": 11,
+        "codename": "delete_subject"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 44,
     "fields": {
-      "name": "Can view предмет",
-      "content_type": 11,
-      "codename": "view_subject"
+        "name": "Can view предмет",
+        "content_type": 11,
+        "codename": "view_subject"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 45,
     "fields": {
-      "name": "Can add пользователь",
-      "content_type": 12,
-      "codename": "add_user"
+        "name": "Can add пользователь",
+        "content_type": 12,
+        "codename": "add_user"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 46,
     "fields": {
-      "name": "Can change пользователь",
-      "content_type": 12,
-      "codename": "change_user"
+        "name": "Can change пользователь",
+        "content_type": 12,
+        "codename": "change_user"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 47,
     "fields": {
-      "name": "Can delete пользователь",
-      "content_type": 12,
-      "codename": "delete_user"
+        "name": "Can delete пользователь",
+        "content_type": 12,
+        "codename": "delete_user"
     }
-  },
-  {
+},
+{
     "model": "auth.permission",
     "pk": 48,
     "fields": {
-      "name": "Can view пользователь",
-      "content_type": 12,
-      "codename": "view_user"
+        "name": "Can view пользователь",
+        "content_type": 12,
+        "codename": "view_user"
     }
-  },
-  {
+},
+{
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+        "name": "manager",
+        "permissions": [
+            37,
+            38,
+            40,
+            41,
+            42,
+            44
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 4,
+    "fields": {
+        "name": "default_user",
+        "permissions": [
+            36,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            40,
+            44
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 5,
+    "fields": {
+        "name": "moderator",
+        "permissions": [
+            22,
+            26
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 6,
+    "fields": {
+        "name": "content_manager",
+        "permissions": [
+            34,
+            36
+        ]
+    }
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 1,
     "fields": {
-      "app_label": "admin",
-      "model": "logentry"
+        "app_label": "admin",
+        "model": "logentry"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 2,
     "fields": {
-      "app_label": "auth",
-      "model": "permission"
+        "app_label": "auth",
+        "model": "permission"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 3,
     "fields": {
-      "app_label": "auth",
-      "model": "group"
+        "app_label": "auth",
+        "model": "group"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 4,
     "fields": {
-      "app_label": "contenttypes",
-      "model": "contenttype"
+        "app_label": "contenttypes",
+        "model": "contenttype"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 5,
     "fields": {
-      "app_label": "sessions",
-      "model": "session"
+        "app_label": "sessions",
+        "model": "session"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 6,
     "fields": {
-      "app_label": "catalog",
-      "model": "product"
+        "app_label": "catalog",
+        "model": "product"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 7,
     "fields": {
-      "app_label": "catalog",
-      "model": "productcategory"
+        "app_label": "catalog",
+        "model": "productcategory"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 8,
     "fields": {
-      "app_label": "catalog",
-      "model": "productversion"
+        "app_label": "catalog",
+        "model": "productversion"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 9,
     "fields": {
-      "app_label": "blog",
-      "model": "message"
+        "app_label": "blog",
+        "model": "message"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 10,
     "fields": {
-      "app_label": "students",
-      "model": "student"
+        "app_label": "students",
+        "model": "student"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 11,
     "fields": {
-      "app_label": "students",
-      "model": "subject"
+        "app_label": "students",
+        "model": "subject"
     }
-  },
-  {
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 12,
     "fields": {
-      "app_label": "users",
-      "model": "user"
+        "app_label": "users",
+        "model": "user"
     }
-  },
-  {
+},
+{
     "model": "sessions.session",
-    "pk": "71fox73d0h8ibdt2fj5h6zij6rsxi2hb",
+    "pk": "337b2c7w28ydaqvuk0i0h55s7oqbvdst",
     "fields": {
-      "session_data": ".eJxVjMsOwiAQRf-FtSGFAZlx6b7fQIZHpWogKe3K-O_apAvd3nPOfQnP21r81vPi5yQuQonT7xY4PnLdQbpzvTUZW12XOchdkQftcmwpP6-H-3dQuJdvjRgQEYxl0I5ijJqCAyTHnJMDUKzJEAwJBqWsNgYmSpNxMZPFMxnx_gC7mDam:1sNEfT:lMbNG67dPna4619LAndyqNJbaNrfVaCwyK9zjtJh_mY",
-      "expire_date": "2024-07-12T16:41:47.727Z"
+        "session_data": ".eJxVjMsOwiAQRf-FtSGFAZlx6b7fQIZHpWogKe3K-O_apAvd3nPOfQnP21r81vPi5yQuQonT7xY4PnLdQbpzvTUZW12XOchdkQftcmwpP6-H-3dQuJdvjRgQEYxl0I5ijJqCAyTHnJMDUKzJEAwJBqWsNgYmSpNxMZPFMxnx_gC7mDam:1sNFrr:xiYgfCxxzvthuu0JgFqEF0ghFGpYVbWnuO3cdOmwRxA",
+        "expire_date": "2024-07-12T17:58:39.127Z"
     }
-  },
-  {
+},
+{
+    "model": "sessions.session",
+    "pk": "55dcrqfbh8st8wvht6n4drb4onyyi94d",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hAoA4JL9z0DYZhBqoYmpV0Z765NutDtf-_9l4hpW2vcOi9xInERgzj9bpjyg9sO6J7abZZ5busyodwVedAux5n4eT3cv4Oaev3WgTmj0Z50YO18RlCAWhEbXSAYokLeOztYRguQz5AUoUmsQ2EojsT7A_XgOJY:1sNJwO:RfOMkU6XRbwNdEob0_Zf-FntuXTvYOoLFf-FyyOHetM",
+        "expire_date": "2024-07-12T22:19:36.392Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "nsburfa9t56l2amctytkso6pltzjm5nc",
+    "fields": {
+        "session_data": ".eJxVjDsOgzAQRO_iOrKwjT-kTM8ZrN31EpNEtoShinL3gESRlDPvzbxFhG3NcWu8xDmJq1Di8tsh0JPLAdIDyr1KqmVdZpSHIk_a5FgTv26n-3eQoeV9zZMzpMEPznp2FgakySMYCsZgSEmRJva2D51yaEBb9NoF7snznkwnPl_27DgC:1sNJDR:DwTUdGknr_w2vJCd-CdZBnwTGDl94d0SwOfycYlAZvQ",
+        "expire_date": "2024-07-12T21:33:09.993Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "s1c590u57df55ton4e8jvt69ofh0lam4",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSGFAZlx6b7fQIZHpWogKe3K-O_apAvd3nPOfQnP21r81vPi5yQuQonT7xY4PnLdQbpzvTUZW12XOchdkQftcmwpP6-H-3dQuJdvjRgQEYxl0I5ijJqCAyTHnJMDUKzJEAwJBqWsNgYmSpNxMZPFMxnx_gC7mDam:1sNG5N:OsjyP4GkX506o244bUuKo_dgmSIUUTbt-P2QxQBT2SI",
+        "expire_date": "2024-07-12T18:12:37.892Z"
+    }
+},
+{
     "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "Смартфон Galaxy S21",
+        "description": "Новый смартфон Galaxy S21 с инновационными функциями и улучшенной камерой. Наслаждайтесь высококачественным экраном и производительностью.",
+        "price": 70000,
+        "image": "images/s21_BBoFPtl.png",
+        "category": null,
+        "slug": "smartfon-galaxy-s21",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+        "name": "Ноутбук MacBook Air",
+        "description": "Легкий и мощный ноутбук MacBook Air с процессором M1, обеспечивающий высокую производительность и длительное время работы от батареи.",
+        "price": 90000,
+        "image": "images/macbook_air_2019_review_9_thumb_Y85oVJQ.jpg",
+        "category": null,
+        "slug": "noutbuk-macbook-air",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+        "name": "Беспроводные наушники AirPods Pro",
+        "description": "Беспроводные наушники AirPods Pro с активным шумоподавлением и превосходным качеством звука. Идеальны для прослушивания музыки и звонков.",
+        "price": 20000,
+        "image": "images/airpods_W2X0iFR.jpg",
+        "category": null,
+        "slug": "besprovodnye-naushniki-airpods-pro",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Смарт-часы Apple Watch Series 6",
+        "description": "Смарт-часы Apple Watch Series 6 с функцией измерения уровня кислорода в крови и мониторингом сердечного ритма. Следите за своим здоровьем и активностью.",
+        "price": 40000,
+        "image": "images/clock_UTCHzSC.png",
+        "category": null,
+        "slug": "smart-chasy-apple-watch-series-6",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "Планшет iPad Pro",
+        "description": "Мощный планшет iPad Pro с дисплеем Liquid Retina и процессором M1. Идеален для творчества и работы в движении.",
+        "price": 85000,
+        "image": "images/ipad_R8TAz9k.png",
+        "category": null,
+        "slug": "planshet-ipad-pro",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+        "name": "Игровая консоль PlayStation 5",
+        "description": "Новейшая игровая консоль PlayStation 5 с поддержкой 4K и ультравысокой производительностью. Погрузитесь в мир игр нового поколения.",
+        "price": 60000,
+        "image": "images/playst5_soWTYwO.png",
+        "category": null,
+        "slug": "igrovaia-konsol-playstation-5",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+        "name": "Фитнес-браслет Xiaomi Mi Band 6",
+        "description": "Фитнес-браслет Xiaomi Mi Band 6 с большим AMOLED-экраном и функциями мониторинга здоровья и фитнеса.",
+        "price": 3000,
+        "image": "images/mi5_LQTnfoB.png",
+        "category": null,
+        "slug": "fitnes-braslet-xiaomi-mi-band-6",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+        "name": "Умная колонка Яндекс.Станция",
+        "description": "Умная колонка Яндекс.Станция с голосовым помощником Алиса. Слушайте музыку, управляйте умным домом и получайте ответы на вопросы.",
+        "price": 10000,
+        "image": "images/алиса_qvwsZH3.png",
+        "category": null,
+        "slug": "umnaia-kolonka-iandeks-stantsiia",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 10,
+    "fields": {
+        "name": "Кофемашина DeLonghi Magnifica",
+        "description": "Автоматическая кофемашина DeLonghi Magnifica для приготовления эспрессо и капучино в домашних условиях.",
+        "price": 35000,
+        "image": "images/113_KkReni_MzGNXlc.png",
+        "category": null,
+        "slug": "kofemashina-delonghi-magnifica",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 11,
+    "fields": {
+        "name": "Электросамокат Xiaomi Mi Electric Scooter",
+        "description": "Легкий и удобный электросамокат Xiaomi Mi Electric Scooter с дальностью хода до 30 км и максимальной скоростью 25 км/ч.",
+        "price": 25000,
+        "image": "images/xiaomi-mijia-electric-scooter-1s-4_T9l8jBs.png",
+        "category": null,
+        "slug": "elektrosamokat-xiaomi-mi-electric-scooter",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 12,
+    "fields": {
+        "name": "компьютер",
+        "description": "мой пк",
+        "price": 100000,
+        "image": "images/scale_1200_J2CVE1i.png",
+        "category": null,
+        "slug": "kompiuter",
+        "owner": 1
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 13,
+    "fields": {
+        "name": "книги",
+        "description": "нет учебники",
+        "price": 10000,
+        "image": "images/hggdyy_l9aWD1N.png",
+        "category": null,
+        "slug": "knigi",
+        "owner": 3
+    }
+},
+{
+    "model": "blog.message",
     "pk": 1,
     "fields": {
-      "name": "Galaxy S21",
-      "description": "смартфон",
-      "price": 50000,
-      "image": "images/s21_lWzPSb0.png",
-      "category": null,
-      "slug": "galaxy-s21",
-      "owner": 1
+        "title": "Преимущества регулярных физических упражнений",
+        "slug": "preimushchestva-reguliarnykh-fizicheskikh-uprazhnenii",
+        "description": "Регулярные физические упражнения улучшают общее здоровье, повышают выносливость и улучшают настроение. Найдите подходящий вид спорта и занимайтесь регулярно.",
+        "image": "images/зарядка_JF1RIGV.png",
+        "date_pub": "2024-06-28T17:01:17.667Z",
+        "is_published": true,
+        "views": 1
     }
-  },
-  {
+},
+{
+    "model": "blog.message",
+    "pk": 2,
+    "fields": {
+        "title": "Важность правильного питания",
+        "slug": "vazhnost-pravilnogo-pitaniia",
+        "description": "Правильное питание играет ключевую роль в поддержании здоровья. Употребляйте разнообразные продукты, богатые витаминами и минералами.",
+        "image": "images/фрукты_bFcO5yU.png",
+        "date_pub": "2024-06-28T17:01:37.383Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 3,
+    "fields": {
+        "title": "Советы по организации рабочего места",
+        "slug": "sovety-po-organizatsii-rabochego-mesta",
+        "description": "Хорошо организованное рабочее место способствует продуктивности. Используйте эргономичную мебель и следите за чистотой рабочего стола.",
+        "image": "images/scale_1200_UUu9q7L.png",
+        "date_pub": "2024-06-28T17:01:50.239Z",
+        "is_published": true,
+        "views": 2
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 4,
+    "fields": {
+        "title": "Как справляться со стрессом на работе",
+        "slug": "kak-spravliatsia-so-stressom-na-rabote",
+        "description": "Для снижения уровня стресса на работе важно правильно планировать задачи, делать перерывы и заниматься релаксацией.",
+        "image": "images/penyakit_akibat_stres_WMHjhbE.png",
+        "date_pub": "2024-06-28T17:02:24.233Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 5,
+    "fields": {
+        "title": "Путешествия и новые впечатления",
+        "slug": "puteshestviia-i-novye-vpechatleniia",
+        "description": "Путешествия позволяют расширить кругозор и получить новые впечатления. Планируйте поездки и исследуйте новые места.",
+        "image": "images/путешествия_9jzP2Od.png",
+        "date_pub": "2024-06-28T17:02:38.370Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 6,
+    "fields": {
+        "title": "Роль хобби в жизни человека",
+        "slug": "rol-khobbi-v-zhizni-cheloveka",
+        "description": "Хобби помогает расслабиться и развить новые навыки. Найдите занятие по душе и уделяйте ему время.",
+        "image": "images/sshot-29_R9AAY4c.png",
+        "date_pub": "2024-06-28T17:03:08.104Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 7,
+    "fields": {
+        "title": "Важность образования и саморазвития",
+        "slug": "vazhnost-obrazovaniia-i-samorazvitiia",
+        "description": "Образование и саморазвитие открывают новые возможности и улучшают качество жизни. Учитесь новому и развивайтесь постоянно.",
+        "image": "images/hggdyy_eaDRXkx.png",
+        "date_pub": "2024-06-28T17:03:31.958Z",
+        "is_published": true,
+        "views": 2
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 8,
+    "fields": {
+        "title": "Советы по улучшению сна",
+        "slug": "sovety-po-uluchsheniiu-sna",
+        "description": "Для хорошего сна важны регулярный режим, комфортная постель и отсутствие электронных устройств перед сном.",
+        "image": "images/orig_gYt6JAl.png",
+        "date_pub": "2024-06-28T17:04:01.317Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 9,
+    "fields": {
+        "title": "Здоровье и физическая активность",
+        "slug": "zdorove-i-fizicheskaia-aktivnost",
+        "description": "Физическая активность помогает поддерживать здоровье и форму. Регулярно занимайтесь спортом и ведите активный образ жизни.",
+        "image": "images/image_k0MZlYB.png",
+        "date_pub": "2024-06-28T17:04:17.545Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "students.student",
+    "pk": 1,
+    "fields": {
+        "name": "Иван",
+        "surname": "Иванов",
+        "age": 20,
+        "slug": "ivan",
+        "email": null
+    }
+},
+{
+    "model": "students.student",
+    "pk": 2,
+    "fields": {
+        "name": "Анна",
+        "surname": "Смирнова",
+        "age": 23,
+        "slug": "anna",
+        "email": null
+    }
+},
+{
+    "model": "students.student",
+    "pk": 3,
+    "fields": {
+        "name": "Елена",
+        "surname": "Николаева",
+        "age": 19,
+        "slug": "elena",
+        "email": null
+    }
+},
+{
+    "model": "students.student",
+    "pk": 4,
+    "fields": {
+        "name": "Мария",
+        "surname": "Федорова",
+        "age": 20,
+        "slug": "mariia",
+        "email": null
+    }
+},
+{
     "model": "users.user",
     "pk": 1,
     "fields": {
-      "password": "pbkdf2_sha256$720000$5IFzcdjzdAWPpyUCyGPl3t$Go4o2rAlHMUYeZt971jOBqnYPDKhRuIkFqfqrglf3xQ=",
-      "last_login": "2024-06-28T16:41:47.725Z",
-      "is_superuser": false,
-      "first_name": "",
-      "last_name": "",
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2024-06-28T15:52:10.318Z",
-      "email": "folmerpetr21@gmail.com",
-      "phone": null,
-      "avatar": "",
-      "country": null,
-      "token": "afa2ec7c785d8ff6b4f02d36edea8ebf",
-      "groups": [],
-      "user_permissions": []
+        "password": "pbkdf2_sha256$720000$098HPnAvtZhLDW4JifsCYL$lzfoS6K8a9MxY/v9MxGYZZ2+GVDd91TGNB0ztvsodv8=",
+        "last_login": "2024-06-28T22:06:52Z",
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-06-28T15:52:10Z",
+        "email": "folmerpetr21@gmail.com",
+        "phone": null,
+        "avatar": "",
+        "country": null,
+        "token": "afa2ec7c785d8ff6b4f02d36edea8ebf",
+        "groups": [
+            3,
+            4,
+            5,
+            6
+        ],
+        "user_permissions": []
     }
-  },
-  {
+},
+{
     "model": "users.user",
     "pk": 2,
     "fields": {
-      "password": "pbkdf2_sha256$720000$Er6qLJtIHjW5K1ZUfXU8CG$5k5/oDJUHB2fTien2+ehvXE0VNwGea3A5ZyuMY7Ocr4=",
-      "last_login": "2024-06-28T15:55:31.575Z",
-      "is_superuser": true,
-      "first_name": "Admin",
-      "last_name": "SkyPro",
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2024-06-28T15:54:23.141Z",
-      "email": "admin@sky.pro",
-      "phone": null,
-      "avatar": "",
-      "country": null,
-      "token": null,
-      "groups": [],
-      "user_permissions": []
+        "password": "pbkdf2_sha256$720000$Er6qLJtIHjW5K1ZUfXU8CG$5k5/oDJUHB2fTien2+ehvXE0VNwGea3A5ZyuMY7Ocr4=",
+        "last_login": "2024-06-28T22:19:36.389Z",
+        "is_superuser": true,
+        "first_name": "Admin",
+        "last_name": "SkyPro",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-06-28T15:54:23.141Z",
+        "email": "admin@sky.pro",
+        "phone": null,
+        "avatar": "",
+        "country": null,
+        "token": null,
+        "groups": [],
+        "user_permissions": []
     }
-  }
+},
+{
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$dDc8isKKVw3yFk1YdWlOHE$ynQ5WiQcVpYny894pisjO7DAnKjIEH1QLOYTU/a8vgg=",
+        "last_login": "2024-06-28T22:15:38.735Z",
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-06-28T18:14:19Z",
+        "email": "folmerpetr31@gmail.com",
+        "phone": null,
+        "avatar": "",
+        "country": null,
+        "token": "d97117977bd3887f6f6a80b56ec9d04f",
+        "groups": [
+            4
+        ],
+        "user_permissions": []
+    }
+}
 ]

@@ -54,8 +54,13 @@
                 <p class="card-text">{{ message.description|truncatechars:88 }}</p>
                 <p class="card-text">{{ message.views }} &#x1F441;</p>
                 <div class="btn-group">
+                    {% if perms.blog.change_student %}
                     <a href="{% url 'message_form' slug=message.slug %}" class="btn btn-dark btn-sm">&#9998;</a>
-                    <a href="{% url 'message_confirm_delete' pk=message.pk %}" class="btn btn-danger btn-sm">&#128465;</a>
+                    {% endif %}
+                    {% if perms.blog.delete_student and user == message.owner%}
+                    <a href="{% url 'message_confirm_delete' pk=message.pk %}"
+                       class="btn btn-danger btn-sm">&#128465;</a>
+                    {% endif %}
                 </div>
             </div>
         </div>

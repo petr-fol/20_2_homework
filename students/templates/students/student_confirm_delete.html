@@ -23,10 +23,13 @@
                         <a href="{% url 'student_list' %}">
                             <button class="btn btn-dark">&#129184; Отмена</button>
                         </a>
-                        <form class="delete-form" method="post" action="{% url 'student_confirm_delete' pk=student.pk %}">
+                        <form class="delete-form" method="post"
+                              action="{% url 'student_confirm_delete' pk=student.pk %}">
                             {% csrf_token %}
+                            {% if perms.students.delete_student%}
                             <input type="hidden" name="_method" value="delete">
                             <button type="submit" class="btn btn-danger">Подтвердить удаление &#128465;</button>
+                            {% endif %}
                         </form>
                     </div>
                 </div>

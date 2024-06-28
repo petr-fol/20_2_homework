@@ -1,5 +1,4 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
-
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from catalog.forms import ProductForm, VersionForm
 from catalog.models import Product, ProductVersion
 from django.forms import inlineformset_factory
@@ -8,19 +7,22 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 
 
-class ProductListView(ListView):
+class ProductListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = Product
     context_object_name = 'products'
+    permission_required = 'catalog.view_product'
 
 
-class ProductDetailView(DetailView):
+class ProductDetailView(LoginRequiredMixin, PermissionRequiredMixin,  DetailView):
     model = Product
     context_object_name = 'product'
+    permission_required = 'catalog.view_product'
 
 
-class ProductCreateView(CreateView, LoginRequiredMixin):
+class ProductCreateView(CreateView, PermissionRequiredMixin,  LoginRequiredMixin):
     model = Product
     form_class = ProductForm
+    permission_required = 'catalog.add_product'
 
     def form_valid(self, form):
         product = form.save()
@@ -33,9 +35,10 @@ class ProductCreateView(CreateView, LoginRequiredMixin):
         return reverse_lazy('product_detail', kwargs={'slug': self.object.slug})
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, PermissionRequiredMixin,  UpdateView):
     model = Product
     form_class = ProductForm
+    permission_required = 'catalog.change_product'
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
@@ -63,9 +66,10 @@ class ProductUpdateView(UpdateView):
         return reverse_lazy('product_detail', kwargs={'slug': self.object.slug})
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, PermissionRequiredMixin,  DeleteView):
     model = Product
     success_url = reverse_lazy('product_list')
+    permission_required = 'catalog.delete_product'
 
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()

@@ -27,8 +27,10 @@
                         </a>
                         <form class="delete-form" method="post" action="{% url 'product_confirm_delete' pk=product.pk %}">
                             {% csrf_token %}
+                            {% if perms.catalog.delete_student%}
                             <input type="hidden" name="_method" value="delete">
                             <button type="submit" class="btn btn-danger">Подтвердить удаление &#128465;</button>
+                            {% endif %}
                         </form>
                     </div>
                 </div>

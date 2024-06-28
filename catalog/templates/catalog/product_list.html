@@ -59,9 +59,13 @@
                 <h5 class="card-price">{{ product.price }} руб.</h5>
                 <p class="card-text">{{ product.description|truncatechars:88 }}</p>
                 <div class="btn-group">
+                    {% if user == product.owner%}
                     <a href="{% url 'product_form' slug=product.slug %}"
                        class="btn btn-dark btn-sm">&#9998;</a>
+                    {% endif %}
+                    {% if perms.catalog.delete_student and user == product.owner or user.is_superuser%}
                     <a href="{% url 'product_confirm_delete' pk=product.pk %}" class="btn btn-danger btn-sm">&#128465;</a>
+                    {% endif %}
                 </div>
             </div>
         </div>

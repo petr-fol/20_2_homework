@@ -1,12 +1,14 @@
-import json
+from django.contrib.auth.models import User, Group
 
-# Читаем данные из файла с текущей кодировкой
-with open('data.json', 'r', encoding='utf-16') as file:
-    data = file.read()
+# Получите пользователя
+user = User.objects.get(username='username')
 
-# Парсим JSON
-json_data = json.loads(data)
+# Проверьте, в какой группе он находится
+for group in user.groups.all():
+    print(group.name)
 
-# Перезаписываем файл с указанной кодировкой (например, UTF-8)
-with open('data_utf8.json', 'w', encoding='utf-8') as file:
-    json.dump(json_data, file, ensure_ascii=False, indent=2)
+# Проверьте, есть ли у него нужные права
+if user.has_perm('app_name.permission_codename'):
+    print("У пользователя есть права")
+else:
+    print("У пользователя нет прав")

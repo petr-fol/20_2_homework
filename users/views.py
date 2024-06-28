@@ -1,3 +1,5 @@
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+
 from config.settings import EMAIL_HOST_USER
 from django.views.generic import CreateView, UpdateView
 from users.forms import UserRegisterForm, UserProfileForm
@@ -11,11 +13,12 @@ from django.conf import settings
 from .models import User
 
 
-class UserCreateView(CreateView):
+class UserCreateView(PermissionRequiredMixin, CreateView):
     model = User
     form_class = UserRegisterForm
     template_name = 'users/register.html'
     success_url = reverse_lazy('users:login')
+    permission_required = 'users.add_user'
 
     def form_valid(self, form):
         # Сохраняем пользователя, но не коммитим его в базу данных
@@ -40,10 +43,11 @@ class UserCreateView(CreateView):
         return super().form_valid(form)
 
 
-class UserUpdateView(UpdateView):
+class UserUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     model = User
     form_class = UserProfileForm
     success_url = reverse_lazy('users:profile')
+    permission_required = 'users.change_user'
 
     def get_object(self, queryset=None):
         return self.request.user

@@ -18,11 +18,13 @@
                     <a href="{% url 'student_list' %}">
                         <button class="btn btn-dark">&#129184; Вернуться</button>
                     </a>
+                    {% if perms.students.delete_student%}
                     <a href="{% url 'student_confirm_delete' pk=student.pk %}">
-                    <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
+                        <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
                     </a>
+                    {% endif %}
                     <a href="{% url 'student_form' slug=student.slug %}">
-                    <button class="btn btn-dark float-right">Редактировать &#9998;</button>
+                        <button class="btn btn-dark float-right">Редактировать &#9998;</button>
                     </a>
                 </div>
             </div>
