@@ -1,11 +1,14 @@
-import secrets
-from django.shortcuts import get_object_or_404, redirect
 from config.settings import EMAIL_HOST_USER
 from django.views.generic import CreateView, UpdateView
 from users.forms import UserRegisterForm, UserProfileForm
-from users.models import User
+from django.urls import reverse_lazy
+import string
+import secrets
+from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
 from django.core.mail import send_mail
-from django.urls import reverse_lazy, reverse
+from django.conf import settings
+from .models import User
 
 
 class UserCreateView(CreateView):
@@ -52,3 +55,27 @@ def email_verification(request, token):
     user.save()
 
     return redirect(reverse("users:login"))
+
+
+def generate_password():
+    password_characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(secrets.choice(password_characters) for _ in range(10))
+    return password
+
+
+def reset_password(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        user = get_object_or_404(User, email=email)
+        new_password = generate_password()
+        user.set_password(new_password)
+        user.save()
+        send_mail(
+            'Восстановление пароля',
+            f'Здравствуйте! Ваш новый пароль: {new_password}',
+            settings.EMAIL_HOST_USER,
+            [user.email],
+            fail_silently=False,
+        )
+        return redirect(reverse('users:reset_password_done'))
+    return render(request, 'users/reset_password.html')
