@@ -1,0 +1,119 @@
+[
+{
+    "model": "blog.message",
+    "pk": 1,
+    "fields": {
+        "title": "Преимущества регулярных физических упражнений",
+        "slug": "preimushchestva-reguliarnykh-fizicheskikh-uprazhnenii",
+        "description": "Регулярные физические упражнения улучшают общее здоровье, повышают выносливость и улучшают настроение. Найдите подходящий вид спорта и занимайтесь регулярно.",
+        "image": "images/зарядка_JF1RIGV.png",
+        "date_pub": "2024-06-28T17:01:17.667Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 2,
+    "fields": {
+        "title": "Важность правильного питания",
+        "slug": "vazhnost-pravilnogo-pitaniia",
+        "description": "Правильное питание играет ключевую роль в поддержании здоровья. Употребляйте разнообразные продукты, богатые витаминами и минералами.",
+        "image": "images/фрукты_bFcO5yU.png",
+        "date_pub": "2024-06-28T17:01:37.383Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 3,
+    "fields": {
+        "title": "Советы по организации рабочего места",
+        "slug": "sovety-po-organizatsii-rabochego-mesta",
+        "description": "Хорошо организованное рабочее место способствует продуктивности. Используйте эргономичную мебель и следите за чистотой рабочего стола.",
+        "image": "images/scale_1200_UUu9q7L.png",
+        "date_pub": "2024-06-28T17:01:50.239Z",
+        "is_published": true,
+        "views": 2
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 4,
+    "fields": {
+        "title": "Как справляться со стрессом на работе",
+        "slug": "kak-spravliatsia-so-stressom-na-rabote",
+        "description": "Для снижения уровня стресса на работе важно правильно планировать задачи, делать перерывы и заниматься релаксацией.",
+        "image": "images/penyakit_akibat_stres_WMHjhbE.png",
+        "date_pub": "2024-06-28T17:02:24.233Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 5,
+    "fields": {
+        "title": "Путешествия и новые впечатления",
+        "slug": "puteshestviia-i-novye-vpechatleniia",
+        "description": "Путешествия позволяют расширить кругозор и получить новые впечатления. Планируйте поездки и исследуйте новые места.",
+        "image": "images/путешествия_9jzP2Od.png",
+        "date_pub": "2024-06-28T17:02:38.370Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 6,
+    "fields": {
+        "title": "Роль хобби в жизни человека",
+        "slug": "rol-khobbi-v-zhizni-cheloveka",
+        "description": "Хобби помогает расслабиться и развить новые навыки. Найдите занятие по душе и уделяйте ему время.",
+        "image": "images/sshot-29_R9AAY4c.png",
+        "date_pub": "2024-06-28T17:03:08.104Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 7,
+    "fields": {
+        "title": "Важность образования и саморазвития",
+        "slug": "vazhnost-obrazovaniia-i-samorazvitiia",
+        "description": "Образование и саморазвитие открывают новые возможности и улучшают качество жизни. Учитесь новому и развивайтесь постоянно.",
+        "image": "images/hggdyy_eaDRXkx.png",
+        "date_pub": "2024-06-28T17:03:31.958Z",
+        "is_published": true,
+        "views": 2
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 8,
+    "fields": {
+        "title": "Советы по улучшению сна",
+        "slug": "sovety-po-uluchsheniiu-sna",
+        "description": "Для хорошего сна важны регулярный режим, комфортная постель и отсутствие электронных устройств перед сном.",
+        "image": "images/orig_gYt6JAl.png",
+        "date_pub": "2024-06-28T17:04:01.317Z",
+        "is_published": true,
+        "views": 1
+    }
+},
+{
+    "model": "blog.message",
+    "pk": 9,
+    "fields": {
+        "title": "Здоровье и физическая активность",
+        "slug": "zdorove-i-fizicheskaia-aktivnost",
+        "description": "Физическая активность помогает поддерживать здоровье и форму. Регулярно занимайтесь спортом и ведите активный образ жизни.",
+        "image": "images/image_k0MZlYB.png",
+        "date_pub": "2024-06-28T17:04:17.545Z",
+        "is_published": true,
+        "views": 1
+    }
+}
+]
