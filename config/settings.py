@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'students.apps.StudentsConfig',
     'users.apps.UsersConfig',
+    'django_dump_load_utf8',
+
 ]
 
 MIDDLEWARE = [
