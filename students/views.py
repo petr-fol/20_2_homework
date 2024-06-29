@@ -1,10 +1,14 @@
+from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
+from django.core.cache import cache
+
 from django.forms import inlineformset_factory
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 from students.forms import StudentForm, SubjectForm
 from students.models import Student, Subject
+from students.services import cached_subjects_for_student
 
 
 # Create your views here.
@@ -15,9 +19,16 @@ class StudentListView(LoginRequiredMixin, PermissionRequiredMixin,  ListView):
     permission_required = 'students.view_student'
 
 
-class StudentDetailView(LoginRequiredMixin, DetailView):
+class StudentDetailView(LoginRequiredMixin,PermissionRequiredMixin, DetailView):
     model = Student
     context_object_name = 'student'
+    permission_required = 'students.view_student'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        Subject.objects.filter(student=self.object)
+        context['subjects'] = cached_subjects_for_student(self.object.pk)
+        return context
 
 
 class StudentCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
