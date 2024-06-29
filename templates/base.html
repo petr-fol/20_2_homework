@@ -87,7 +87,7 @@
 
         .logout-btn {
             position: absolute;
-            left: 20px; /* Расстояние от левого края */
+            left: 10px; /* Расстояние от левого края */
             top: 10px; /* Возможно, вам понадобится настроить вертикальное положение */
         }
 
@@ -95,8 +95,7 @@
         .header-buttons {
             display: flex;
             justify-content: flex-end; /* Выравнивание по правому краю */
-
-            }
+        }
 
     </style>
 </head>
@@ -107,6 +106,9 @@
             <a href="{% url 'product_list' %}" class="btn">Товары</a>
             <a href="{% url 'message_list' %}" class="btn">Блог</a>
             <a href="{% url 'student_list' %}" class="btn">Студенты</a>
+            {% if user.is_authenticated and user.is_staff %}
+            <a href="/admin/" class="btn">Админка</a>
+            {% endif %}
             <div class="logout-btn">
                 {% if user.is_authenticated %}
                 <form action="{% url 'users:logout' %}" method="post">
@@ -129,7 +131,7 @@
 <div class="dropdown fixed-button">
     <button class="btn">&#10133; Добавить</button>
     <div class="dropdown-menu">
-        {% if user.is_authenticated%}
+        {% if user.is_authenticated %}
         <a href="{% url 'product_create' %}" class="dropdown-item">Товар</a>
         {% endif %}
         <a href="{% url 'message_create' %}" class="dropdown-item">Сообщение</a>
