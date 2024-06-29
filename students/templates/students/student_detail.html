@@ -7,18 +7,17 @@
         height: 400px; /* Устанавливаем фиксированную высоту изображения */
         object-fit: cover; /* Подгоняем изображение под размеры контейнера с сохранением пропорций */
     }
-
 </style>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <h1 class="card-title">{{student.name}} {{student.surname}}</h1>
+                    <h1 class="card-title">{{ student.name }} {{ student.surname }}</h1>
                     <a href="{% url 'student_list' %}">
                         <button class="btn btn-dark">&#129184; Вернуться</button>
                     </a>
-                    {% if perms.students.delete_student%}
+                    {% if perms.students.delete_student %}
                     <a href="{% url 'student_confirm_delete' pk=student.pk %}">
                         <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
                     </a>
@@ -30,6 +29,25 @@
             </div>
         </div>
     </div>
+    <!-- Раздел для отображения предметов студента -->
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Предметы</h2>
+                    <ul class="list-group">
+                        {% for subject in subjects %}
+                        <li class="list-group-item">
+                            <h5>{{ subject.title }}</h5>
+                            <p>{{ subject.description }}</p>
+                        </li>
+                        {% empty %}
+                        <li class="list-group-item">Нет предметов</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
-
