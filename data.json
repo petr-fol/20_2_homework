@@ -416,6 +416,84 @@
     }
 },
 {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2024-06-29T12:04:04.376Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "default_user",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2024-06-29T12:10:41.941Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "аксессуар",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2024-06-29T12:11:35.089Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Электроника",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2024-06-29T12:11:49.681Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "транспорт",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2024-06-29T12:12:49.136Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "оборудование",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2024-06-29T12:13:25.997Z",
+        "user": 2,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "литература",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -882,7 +960,9 @@
             31,
             32,
             40,
-            44
+            44,
+            46,
+            48
         ]
     }
 },
@@ -1014,18 +1094,18 @@
 },
 {
     "model": "sessions.session",
-    "pk": "55dcrqfbh8st8wvht6n4drb4onyyi94d",
-    "fields": {
-        "session_data": ".eJxVjEEOwiAQRe_C2hAoA4JL9z0DYZhBqoYmpV0Z765NutDtf-_9l4hpW2vcOi9xInERgzj9bpjyg9sO6J7abZZ5busyodwVedAux5n4eT3cv4Oaev3WgTmj0Z50YO18RlCAWhEbXSAYokLeOztYRguQz5AUoUmsQ2EojsT7A_XgOJY:1sNJwO:RfOMkU6XRbwNdEob0_Zf-FntuXTvYOoLFf-FyyOHetM",
-        "expire_date": "2024-07-12T22:19:36.392Z"
-    }
-},
-{
-    "model": "sessions.session",
     "pk": "nsburfa9t56l2amctytkso6pltzjm5nc",
     "fields": {
         "session_data": ".eJxVjDsOgzAQRO_iOrKwjT-kTM8ZrN31EpNEtoShinL3gESRlDPvzbxFhG3NcWu8xDmJq1Di8tsh0JPLAdIDyr1KqmVdZpSHIk_a5FgTv26n-3eQoeV9zZMzpMEPznp2FgakySMYCsZgSEmRJva2D51yaEBb9NoF7snznkwnPl_27DgC:1sNJDR:DwTUdGknr_w2vJCd-CdZBnwTGDl94d0SwOfycYlAZvQ",
         "expire_date": "2024-07-12T21:33:09.993Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ntsfu7sm93xu9pwu9raa4bxs8awcaupk",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hAoA4JL9z0DYZhBqoYmpV0Z765NutDtf-_9l4hpW2vcOi9xInERgzj9bpjyg9sO6J7abZZ5busyodwVedAux5n4eT3cv4Oaev3WgTmj0Z50YO18RlCAWhEbXSAYokLeOztYRguQz5AUoUmsQ2EojsT7A_XgOJY:1sNWq0:R3rEh-ao7NGZfygrgJpLjrhaMUy5zBhmuonT3SVnZbw",
+        "expire_date": "2024-07-13T12:05:52.345Z"
     }
 },
 {
@@ -1193,6 +1273,46 @@
     }
 },
 {
+    "model": "catalog.productcategory",
+    "pk": 1,
+    "fields": {
+        "name": "аксессуар",
+        "description": "товар который подходит под категорию аксессуаров"
+    }
+},
+{
+    "model": "catalog.productcategory",
+    "pk": 2,
+    "fields": {
+        "name": "Электроника",
+        "description": "товар который подходит под категорию электроники"
+    }
+},
+{
+    "model": "catalog.productcategory",
+    "pk": 3,
+    "fields": {
+        "name": "транспорт",
+        "description": "товар который подходит под категорию транспорта"
+    }
+},
+{
+    "model": "catalog.productcategory",
+    "pk": 4,
+    "fields": {
+        "name": "оборудование",
+        "description": "товар который подходит под категорию оборудования"
+    }
+},
+{
+    "model": "catalog.productcategory",
+    "pk": 5,
+    "fields": {
+        "name": "литература",
+        "description": "товар который подходит под категорию литературы"
+    }
+},
+{
     "model": "blog.message",
     "pk": 1,
     "fields": {
@@ -1354,11 +1474,29 @@
     }
 },
 {
+    "model": "students.subject",
+    "pk": 1,
+    "fields": {
+        "title": "биология",
+        "description": "занятия биологией",
+        "student": 1
+    }
+},
+{
+    "model": "students.subject",
+    "pk": 2,
+    "fields": {
+        "title": "информатика",
+        "description": "занятия программированием",
+        "student": 1
+    }
+},
+{
     "model": "users.user",
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$720000$098HPnAvtZhLDW4JifsCYL$lzfoS6K8a9MxY/v9MxGYZZ2+GVDd91TGNB0ztvsodv8=",
-        "last_login": "2024-06-28T22:06:52Z",
+        "last_login": "2024-06-29T12:04:20.209Z",
         "is_superuser": false,
         "first_name": "",
         "last_name": "",
@@ -1384,7 +1522,7 @@
     "pk": 2,
     "fields": {
         "password": "pbkdf2_sha256$720000$Er6qLJtIHjW5K1ZUfXU8CG$5k5/oDJUHB2fTien2+ehvXE0VNwGea3A5ZyuMY7Ocr4=",
-        "last_login": "2024-06-28T22:19:36.389Z",
+        "last_login": "2024-06-29T12:05:52.343Z",
         "is_superuser": true,
         "first_name": "Admin",
         "last_name": "SkyPro",
@@ -1405,7 +1543,7 @@
     "pk": 3,
     "fields": {
         "password": "pbkdf2_sha256$720000$dDc8isKKVw3yFk1YdWlOHE$ynQ5WiQcVpYny894pisjO7DAnKjIEH1QLOYTU/a8vgg=",
-        "last_login": "2024-06-28T22:15:38.735Z",
+        "last_login": "2024-06-29T12:05:13.628Z",
         "is_superuser": false,
         "first_name": "",
         "last_name": "",
