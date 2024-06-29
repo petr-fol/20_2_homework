@@ -26,7 +26,7 @@
                         <form class="delete-form" method="post"
                               action="{% url 'student_confirm_delete' pk=student.pk %}">
                             {% csrf_token %}
-                            {% if perms.students.delete_student%}
+                            {% if perms.students.delete_student or user == product.owner or user.is_superuser %}
                             <input type="hidden" name="_method" value="delete">
                             <button type="submit" class="btn btn-danger">Подтвердить удаление &#128465;</button>
                             {% endif %}

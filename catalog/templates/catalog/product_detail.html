@@ -21,14 +21,14 @@
                     <a href="{% url 'product_list' %}">
                         <button class="btn btn-dark">&#129184; Вернуться</button>
                     </a>
-                    {% if perms.catalog.delete_student%}
+                    {% if perms.catalog.delete_product or user == product.owner or user.is_superuser %}
                     <a href="{% url 'product_confirm_delete' pk=product.pk %}">
-                    <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
+                        <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
                     </a>
                     {% endif %}
-                    {% if perms.catalog.change_student%}
+                    {% if perms.catalog.change_product or user == product.owner or user.is_superuser %}
                     <a href="{% url 'product_form' slug=product.slug %}">
-                    <button class="btn btn-dark float-right">Редактировать &#9998;</button>
+                        <button class="btn btn-dark float-right">Редактировать &#9998;</button>
                     </a>
                     {% endif %}
                 </div>

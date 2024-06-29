@@ -17,14 +17,16 @@
                     <a href="{% url 'student_list' %}">
                         <button class="btn btn-dark">&#129184; Вернуться</button>
                     </a>
-                    {% if perms.students.delete_student %}
+                    {% if perms.students.delete_student or user == product.owner or user.is_superuser %}
                     <a href="{% url 'student_confirm_delete' pk=student.pk %}">
                         <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
                     </a>
                     {% endif %}
+                    {% if perms.students.change_student or user == product.owner or user.is_superuser %}
                     <a href="{% url 'student_form' slug=student.slug %}">
                         <button class="btn btn-dark float-right">Редактировать &#9998;</button>
                     </a>
+                    {% endif %}
                 </div>
             </div>
         </div>

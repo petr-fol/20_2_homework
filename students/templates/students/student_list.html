@@ -54,9 +54,11 @@
                 </a>
                 <p class="card-text">{{student.age}}</p>
                 <div class="btn-group">
+                    {% if perms.students.change_student or user == product.owner or user.is_superuser %}
                     <a href="{% url 'student_form' slug=student.slug %}"
                        class="btn btn-dark btn-sm">&#9998;</a>
-                    {% if user.is_superuser %}
+                    {% endif %}
+                    {% if perms.students.delete_student or user == product.owner or user.is_superuser %}
                     <a href="{% url 'student_confirm_delete' pk=student.pk %}"
                        class="btn btn-danger btn-sm">&#128465;</a>
                     {% endif %}

@@ -20,12 +20,12 @@
                     <a href="{% url 'message_list' %}">
                         <button class="btn btn-dark">&#129184; Вернуться</button>
                     </a>
-                    {% if perms.blog.delete_student%}
+                    {% if perms.blog.delete_message or user == product.owner or user.is_superuser %}
                     <a href="{% url 'message_confirm_delete' pk=message.pk %}">
                     <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
                     </a>
                     {% endif %}
-                    {% if perms.students.change_student%}
+                    {% if perms.blog.change_message or user == product.owner or user.is_superuser %}
                     <a href="{% url 'message_form' slug=message.slug %}">
                     <button class="btn btn-dark float-right">Редактировать &#9998;</button>
                     </a>
