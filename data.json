@@ -494,6 +494,84 @@
     }
 },
 {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2024-06-29T15:32:33.947Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "default_user",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2024-06-29T15:33:19.053Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "default_user",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2024-06-29T15:33:23.375Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "default_user",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2024-06-29T15:33:42.554Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "3",
+        "object_repr": "manager",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2024-06-29T15:33:57.306Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "5",
+        "object_repr": "moderator",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2024-06-29T15:34:07.047Z",
+        "user": 2,
+        "content_type": 3,
+        "object_id": "6",
+        "object_repr": "content_manager",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -927,42 +1005,16 @@
 },
 {
     "model": "auth.group",
-    "pk": 3,
-    "fields": {
-        "name": "manager",
-        "permissions": [
-            37,
-            38,
-            40,
-            41,
-            42,
-            44
-        ]
-    }
-},
-{
-    "model": "auth.group",
     "pk": 4,
     "fields": {
         "name": "default_user",
         "permissions": [
             36,
-            21,
-            22,
-            23,
             24,
-            25,
-            26,
-            27,
             28,
-            29,
-            30,
-            31,
             32,
             40,
-            44,
-            46,
-            48
+            44
         ]
     }
 },
@@ -1102,18 +1154,18 @@
 },
 {
     "model": "sessions.session",
-    "pk": "ntsfu7sm93xu9pwu9raa4bxs8awcaupk",
-    "fields": {
-        "session_data": ".eJxVjEEOwiAQRe_C2hAoA4JL9z0DYZhBqoYmpV0Z765NutDtf-_9l4hpW2vcOi9xInERgzj9bpjyg9sO6J7abZZ5busyodwVedAux5n4eT3cv4Oaev3WgTmj0Z50YO18RlCAWhEbXSAYokLeOztYRguQz5AUoUmsQ2EojsT7A_XgOJY:1sNWq0:R3rEh-ao7NGZfygrgJpLjrhaMUy5zBhmuonT3SVnZbw",
-        "expire_date": "2024-07-13T12:05:52.345Z"
-    }
-},
-{
-    "model": "sessions.session",
     "pk": "s1c590u57df55ton4e8jvt69ofh0lam4",
     "fields": {
         "session_data": ".eJxVjMsOwiAQRf-FtSGFAZlx6b7fQIZHpWogKe3K-O_apAvd3nPOfQnP21r81vPi5yQuQonT7xY4PnLdQbpzvTUZW12XOchdkQftcmwpP6-H-3dQuJdvjRgQEYxl0I5ijJqCAyTHnJMDUKzJEAwJBqWsNgYmSpNxMZPFMxnx_gC7mDam:1sNG5N:OsjyP4GkX506o244bUuKo_dgmSIUUTbt-P2QxQBT2SI",
         "expire_date": "2024-07-12T18:12:37.892Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "x13qeo9i5h6dilpokskfddey2nkj1qlu",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hAoA4JL9z0DYZhBqoYmpV0Z765NutDtf-_9l4hpW2vcOi9xInERgzj9bpjyg9sO6J7abZZ5busyodwVedAux5n4eT3cv4Oaev3WgTmj0Z50YO18RlCAWhEbXSAYokLeOztYRguQz5AUoUmsQ2EojsT7A_XgOJY:1sNa3b:3wP3pV8jRgOaw9JTRwVb6xZxZCDZ3GDgtlj-1PWMJKA",
+        "expire_date": "2024-07-13T15:32:07.023Z"
     }
 },
 {
@@ -1124,7 +1176,7 @@
         "description": "Новый смартфон Galaxy S21 с инновационными функциями и улучшенной камерой. Наслаждайтесь высококачественным экраном и производительностью.",
         "price": 70000,
         "image": "images/s21_BBoFPtl.png",
-        "category": null,
+        "category": 2,
         "slug": "smartfon-galaxy-s21",
         "owner": 1
     }
@@ -1137,7 +1189,7 @@
         "description": "Легкий и мощный ноутбук MacBook Air с процессором M1, обеспечивающий высокую производительность и длительное время работы от батареи.",
         "price": 90000,
         "image": "images/macbook_air_2019_review_9_thumb_Y85oVJQ.jpg",
-        "category": null,
+        "category": 2,
         "slug": "noutbuk-macbook-air",
         "owner": 1
     }
@@ -1150,7 +1202,7 @@
         "description": "Беспроводные наушники AirPods Pro с активным шумоподавлением и превосходным качеством звука. Идеальны для прослушивания музыки и звонков.",
         "price": 20000,
         "image": "images/airpods_W2X0iFR.jpg",
-        "category": null,
+        "category": 1,
         "slug": "besprovodnye-naushniki-airpods-pro",
         "owner": 1
     }
@@ -1163,7 +1215,7 @@
         "description": "Смарт-часы Apple Watch Series 6 с функцией измерения уровня кислорода в крови и мониторингом сердечного ритма. Следите за своим здоровьем и активностью.",
         "price": 40000,
         "image": "images/clock_UTCHzSC.png",
-        "category": null,
+        "category": 1,
         "slug": "smart-chasy-apple-watch-series-6",
         "owner": 1
     }
@@ -1176,7 +1228,7 @@
         "description": "Мощный планшет iPad Pro с дисплеем Liquid Retina и процессором M1. Идеален для творчества и работы в движении.",
         "price": 85000,
         "image": "images/ipad_R8TAz9k.png",
-        "category": null,
+        "category": 2,
         "slug": "planshet-ipad-pro",
         "owner": 1
     }
@@ -1189,7 +1241,7 @@
         "description": "Новейшая игровая консоль PlayStation 5 с поддержкой 4K и ультравысокой производительностью. Погрузитесь в мир игр нового поколения.",
         "price": 60000,
         "image": "images/playst5_soWTYwO.png",
-        "category": null,
+        "category": 2,
         "slug": "igrovaia-konsol-playstation-5",
         "owner": 1
     }
@@ -1202,7 +1254,7 @@
         "description": "Фитнес-браслет Xiaomi Mi Band 6 с большим AMOLED-экраном и функциями мониторинга здоровья и фитнеса.",
         "price": 3000,
         "image": "images/mi5_LQTnfoB.png",
-        "category": null,
+        "category": 1,
         "slug": "fitnes-braslet-xiaomi-mi-band-6",
         "owner": 1
     }
@@ -1215,7 +1267,7 @@
         "description": "Умная колонка Яндекс.Станция с голосовым помощником Алиса. Слушайте музыку, управляйте умным домом и получайте ответы на вопросы.",
         "price": 10000,
         "image": "images/алиса_qvwsZH3.png",
-        "category": null,
+        "category": 2,
         "slug": "umnaia-kolonka-iandeks-stantsiia",
         "owner": 1
     }
@@ -1228,7 +1280,7 @@
         "description": "Автоматическая кофемашина DeLonghi Magnifica для приготовления эспрессо и капучино в домашних условиях.",
         "price": 35000,
         "image": "images/113_KkReni_MzGNXlc.png",
-        "category": null,
+        "category": 4,
         "slug": "kofemashina-delonghi-magnifica",
         "owner": 1
     }
@@ -1241,7 +1293,7 @@
         "description": "Легкий и удобный электросамокат Xiaomi Mi Electric Scooter с дальностью хода до 30 км и максимальной скоростью 25 км/ч.",
         "price": 25000,
         "image": "images/xiaomi-mijia-electric-scooter-1s-4_T9l8jBs.png",
-        "category": null,
+        "category": 3,
         "slug": "elektrosamokat-xiaomi-mi-electric-scooter",
         "owner": 1
     }
@@ -1509,7 +1561,6 @@
         "country": null,
         "token": "afa2ec7c785d8ff6b4f02d36edea8ebf",
         "groups": [
-            3,
             4,
             5,
             6
@@ -1522,7 +1573,7 @@
     "pk": 2,
     "fields": {
         "password": "pbkdf2_sha256$720000$Er6qLJtIHjW5K1ZUfXU8CG$5k5/oDJUHB2fTien2+ehvXE0VNwGea3A5ZyuMY7Ocr4=",
-        "last_login": "2024-06-29T12:05:52.343Z",
+        "last_login": "2024-06-29T15:32:07.020Z",
         "is_superuser": true,
         "first_name": "Admin",
         "last_name": "SkyPro",
@@ -1543,7 +1594,7 @@
     "pk": 3,
     "fields": {
         "password": "pbkdf2_sha256$720000$dDc8isKKVw3yFk1YdWlOHE$ynQ5WiQcVpYny894pisjO7DAnKjIEH1QLOYTU/a8vgg=",
-        "last_login": "2024-06-29T12:05:13.628Z",
+        "last_login": "2024-06-29T15:30:49.474Z",
         "is_superuser": false,
         "first_name": "",
         "last_name": "",
