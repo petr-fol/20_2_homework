@@ -1,9 +1,11 @@
 import os
 from pathlib import Path
 from os import getenv
+from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -12,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-vj2y9z^l-=w8icspd3lf-q$*q8w2o=#+@ppt51er=van5%lbjr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = getenv('DEBUG') == "True"
 
 ALLOWED_HOSTS = []
 
@@ -70,12 +72,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django_1',
-        'USER': 'postgres',
-        'PASSWORD': '0001',
-        'HOST': 'localhost',  # 'localhost' или '127.0.0.1'
-        'PORT': '5432',  # По умолчанию 5432
+        'ENGINE': getenv('ENGINE'),
+        'NAME': getenv('NAME'),
+        'USER': getenv('USER'),
+        'PASSWORD': getenv('PASSWORD'),
+        'HOST': getenv('HOST'),  # 'localhost' или '127.0.0.1'
+        'PORT': getenv('PORT'),  # По умолчанию 5432
     }
 }
 
@@ -129,11 +131,11 @@ LOGOUT_REDIRECT_URL = '/'
 # настройка почтового сервера
 
 # settings.py
-password = getenv('GOOGLE_PASSWORD')
+
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "folmerpetr21@gmail.com"
-EMAIL_HOST_PASSWORD = password
+EMAIL_PORT = getenv('EMAIL_PORT')
+EMAIL_HOST_USER = getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = getenv('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
@@ -142,3 +144,15 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 LOGIN_URL = '/users/'
 # LOGIN_REDIRECT_URL = '/'
+
+# настройки кэша
+
+CACHE_ENABLED = getenv("CACHE_ENABLED") == "True"
+
+if CACHE_ENABLED:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": getenv('CACHE_LOCATION')
+        }
+    }
