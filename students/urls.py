@@ -1,11 +1,12 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
+from django.views.decorators.cache import cache_page
 
 from students.views import StudentListView, StudentDetailView, StudentUpdateView, StudentDeleteView, StudentCreateView
 
 urlpatterns = [
-    path('', StudentListView.as_view(), name='student_list'),
+    path('', cache_page(60)(StudentListView.as_view()), name='student_list'),
     path('detail/<slug:slug>/', StudentDetailView.as_view(), name='student_detail'),
     path('edit/<slug:slug>/', StudentUpdateView.as_view(), name='student_form'),
     path('confirm_delete/<pk>/', StudentDeleteView.as_view(), name='student_confirm_delete'),
