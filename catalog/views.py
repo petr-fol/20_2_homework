@@ -6,11 +6,16 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 
+from catalog.services import get_products_from_cache
+
 
 class ProductListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = Product
     context_object_name = 'products'
     permission_required = 'catalog.view_product'
+
+    def get_queryset(self):
+        return get_products_from_cache()
 
 
 class ProductDetailView(LoginRequiredMixin, PermissionRequiredMixin,  DetailView):
