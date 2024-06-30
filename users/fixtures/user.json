@@ -4,19 +4,21 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$720000$5IFzcdjzdAWPpyUCyGPl3t$Go4o2rAlHMUYeZt971jOBqnYPDKhRuIkFqfqrglf3xQ=",
-        "last_login": "2024-06-28T16:41:47.725Z",
+        "last_login": "2024-06-28T16:41:47Z",
         "is_superuser": false,
         "first_name": "",
         "last_name": "",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2024-06-28T15:52:10.318Z",
+        "date_joined": "2024-06-28T15:52:10Z",
         "email": "folmerpetr21@gmail.com",
         "phone": null,
         "avatar": "",
         "country": null,
         "token": "afa2ec7c785d8ff6b4f02d36edea8ebf",
-        "groups": [],
+        "groups": [
+            1
+        ],
         "user_permissions": []
     }
 },
@@ -25,7 +27,7 @@
     "pk": 2,
     "fields": {
         "password": "pbkdf2_sha256$720000$Er6qLJtIHjW5K1ZUfXU8CG$5k5/oDJUHB2fTien2+ehvXE0VNwGea3A5ZyuMY7Ocr4=",
-        "last_login": "2024-06-28T15:55:31.575Z",
+        "last_login": "2024-06-30T12:07:11.447Z",
         "is_superuser": true,
         "first_name": "Admin",
         "last_name": "SkyPro",

@@ -9,7 +9,8 @@
         "image": "images/s21_BBoFPtl.png",
         "category": null,
         "slug": "smartfon-galaxy-s21",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -22,7 +23,8 @@
         "image": "images/macbook_air_2019_review_9_thumb_Y85oVJQ.jpg",
         "category": null,
         "slug": "noutbuk-macbook-air",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -35,7 +37,8 @@
         "image": "images/airpods_W2X0iFR.jpg",
         "category": null,
         "slug": "besprovodnye-naushniki-airpods-pro",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -48,7 +51,8 @@
         "image": "images/clock_UTCHzSC.png",
         "category": null,
         "slug": "smart-chasy-apple-watch-series-6",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -61,7 +65,8 @@
         "image": "images/ipad_R8TAz9k.png",
         "category": null,
         "slug": "planshet-ipad-pro",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -74,7 +79,8 @@
         "image": "images/playst5_soWTYwO.png",
         "category": null,
         "slug": "igrovaia-konsol-playstation-5",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -87,7 +93,8 @@
         "image": "images/mi5_LQTnfoB.png",
         "category": null,
         "slug": "fitnes-braslet-xiaomi-mi-band-6",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -100,7 +107,8 @@
         "image": "images/алиса_qvwsZH3.png",
         "category": null,
         "slug": "umnaia-kolonka-iandeks-stantsiia",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -113,7 +121,8 @@
         "image": "images/113_KkReni_MzGNXlc.png",
         "category": null,
         "slug": "kofemashina-delonghi-magnifica",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -126,7 +135,8 @@
         "image": "images/xiaomi-mijia-electric-scooter-1s-4_T9l8jBs.png",
         "category": null,
         "slug": "elektrosamokat-xiaomi-mi-electric-scooter",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 }
 ]

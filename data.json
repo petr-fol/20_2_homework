@@ -3,11 +3,11 @@
     "model": "admin.logentry",
     "pk": 1,
     "fields": {
-        "action_time": "2024-06-28T17:52:53.062Z",
+        "action_time": "2024-06-30T12:39:51.560Z",
         "user": 2,
         "content_type": 3,
         "object_id": "1",
-        "object_repr": "manager",
+        "object_repr": "moderator",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -16,559 +16,13 @@
     "model": "admin.logentry",
     "pk": 2,
     "fields": {
-        "action_time": "2024-06-28T17:54:01.189Z",
+        "action_time": "2024-06-30T12:40:20.589Z",
         "user": 2,
         "content_type": 12,
         "object_id": "1",
         "object_repr": "folmerpetr21@gmail.com",
         "action_flag": 2,
         "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 3,
-    "fields": {
-        "action_time": "2024-06-28T17:56:28.781Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "1",
-        "object_repr": "folmerpetr21@gmail.com",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 4,
-    "fields": {
-        "action_time": "2024-06-28T17:57:07.568Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "1",
-        "object_repr": "folmerpetr21@gmail.com",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 5,
-    "fields": {
-        "action_time": "2024-06-28T17:57:44.373Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "1",
-        "object_repr": "folmerpetr21@gmail.com",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 6,
-    "fields": {
-        "action_time": "2024-06-28T17:58:04.108Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "1",
-        "object_repr": "manager",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 7,
-    "fields": {
-        "action_time": "2024-06-28T18:03:19.033Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "1",
-        "object_repr": "manager",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 8,
-    "fields": {
-        "action_time": "2024-06-28T18:04:14.489Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "1",
-        "object_repr": "folmerpetr21@gmail.com",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 9,
-    "fields": {
-        "action_time": "2024-06-28T18:16:35.947Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "1",
-        "object_repr": "folmerpetr21@gmail.com",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 10,
-    "fields": {
-        "action_time": "2024-06-28T18:18:05.620Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "2",
-        "object_repr": "manager1",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 11,
-    "fields": {
-        "action_time": "2024-06-28T18:18:19.154Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "1",
-        "object_repr": "folmerpetr21@gmail.com",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"Staff status\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 12,
-    "fields": {
-        "action_time": "2024-06-28T18:21:07.483Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "2",
-        "object_repr": "manager1",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 13,
-    "fields": {
-        "action_time": "2024-06-28T18:30:43.968Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "1",
-        "object_repr": "manager",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 14,
-    "fields": {
-        "action_time": "2024-06-28T18:31:34.882Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "3",
-        "object_repr": "manager",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 15,
-    "fields": {
-        "action_time": "2024-06-28T18:31:44.069Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "1",
-        "object_repr": "folmerpetr21@gmail.com",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 16,
-    "fields": {
-        "action_time": "2024-06-28T21:16:24.138Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "4",
-        "object_repr": "default_user",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 17,
-    "fields": {
-        "action_time": "2024-06-28T21:16:45.072Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "1",
-        "object_repr": "folmerpetr21@gmail.com",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 18,
-    "fields": {
-        "action_time": "2024-06-28T21:30:40.444Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "3",
-        "object_repr": "folmerpetr31@gmail.com",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 19,
-    "fields": {
-        "action_time": "2024-06-28T21:31:53.535Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "3",
-        "object_repr": "folmerpetr31@gmail.com",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 20,
-    "fields": {
-        "action_time": "2024-06-28T21:32:55.746Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "4",
-        "object_repr": "default_user",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 21,
-    "fields": {
-        "action_time": "2024-06-28T21:55:26.063Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "4",
-        "object_repr": "default_user",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 22,
-    "fields": {
-        "action_time": "2024-06-28T21:59:08.854Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "5",
-        "object_repr": "moderator",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 23,
-    "fields": {
-        "action_time": "2024-06-28T21:59:25.293Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "5",
-        "object_repr": "moderator",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 24,
-    "fields": {
-        "action_time": "2024-06-28T21:59:34.345Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "3",
-        "object_repr": "manager",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 25,
-    "fields": {
-        "action_time": "2024-06-28T22:01:23.362Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "1",
-        "object_repr": "folmerpetr21@gmail.com",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 26,
-    "fields": {
-        "action_time": "2024-06-28T22:11:55.706Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "4",
-        "object_repr": "default_user",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 27,
-    "fields": {
-        "action_time": "2024-06-28T22:20:40.463Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "6",
-        "object_repr": "content_manager",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 28,
-    "fields": {
-        "action_time": "2024-06-28T22:20:58.370Z",
-        "user": 2,
-        "content_type": 12,
-        "object_id": "1",
-        "object_repr": "folmerpetr21@gmail.com",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 29,
-    "fields": {
-        "action_time": "2024-06-28T22:23:56.954Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "4",
-        "object_repr": "default_user",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 30,
-    "fields": {
-        "action_time": "2024-06-28T22:24:07.706Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "3",
-        "object_repr": "manager",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 31,
-    "fields": {
-        "action_time": "2024-06-28T22:24:12.779Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "5",
-        "object_repr": "moderator",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 32,
-    "fields": {
-        "action_time": "2024-06-28T22:24:19.383Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "6",
-        "object_repr": "content_manager",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 33,
-    "fields": {
-        "action_time": "2024-06-29T12:04:04.376Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "4",
-        "object_repr": "default_user",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 34,
-    "fields": {
-        "action_time": "2024-06-29T12:10:41.941Z",
-        "user": 2,
-        "content_type": 7,
-        "object_id": "1",
-        "object_repr": "аксессуар",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 35,
-    "fields": {
-        "action_time": "2024-06-29T12:11:35.089Z",
-        "user": 2,
-        "content_type": 7,
-        "object_id": "2",
-        "object_repr": "Электроника",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 36,
-    "fields": {
-        "action_time": "2024-06-29T12:11:49.681Z",
-        "user": 2,
-        "content_type": 7,
-        "object_id": "3",
-        "object_repr": "транспорт",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 37,
-    "fields": {
-        "action_time": "2024-06-29T12:12:49.136Z",
-        "user": 2,
-        "content_type": 7,
-        "object_id": "4",
-        "object_repr": "оборудование",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 38,
-    "fields": {
-        "action_time": "2024-06-29T12:13:25.997Z",
-        "user": 2,
-        "content_type": 7,
-        "object_id": "5",
-        "object_repr": "литература",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 39,
-    "fields": {
-        "action_time": "2024-06-29T15:32:33.947Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "4",
-        "object_repr": "default_user",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 40,
-    "fields": {
-        "action_time": "2024-06-29T15:33:19.053Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "4",
-        "object_repr": "default_user",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 41,
-    "fields": {
-        "action_time": "2024-06-29T15:33:23.375Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "4",
-        "object_repr": "default_user",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 42,
-    "fields": {
-        "action_time": "2024-06-29T15:33:42.554Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "3",
-        "object_repr": "manager",
-        "action_flag": 3,
-        "change_message": ""
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 43,
-    "fields": {
-        "action_time": "2024-06-29T15:33:57.306Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "5",
-        "object_repr": "moderator",
-        "action_flag": 2,
-        "change_message": "[]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 44,
-    "fields": {
-        "action_time": "2024-06-29T15:34:07.047Z",
-        "user": 2,
-        "content_type": 3,
-        "object_id": "6",
-        "object_repr": "content_manager",
-        "action_flag": 2,
-        "change_message": "[]"
     }
 },
 {
@@ -755,77 +209,104 @@
     "model": "auth.permission",
     "pk": 21,
     "fields": {
-        "name": "Can add Товар",
+        "name": "Can add Категория",
         "content_type": 6,
-        "codename": "add_product"
+        "codename": "add_productcategory"
     }
 },
 {
     "model": "auth.permission",
     "pk": 22,
     "fields": {
-        "name": "Can change Товар",
+        "name": "Can change Категория",
         "content_type": 6,
-        "codename": "change_product"
+        "codename": "change_productcategory"
     }
 },
 {
     "model": "auth.permission",
     "pk": 23,
     "fields": {
-        "name": "Can delete Товар",
+        "name": "Can delete Категория",
         "content_type": 6,
-        "codename": "delete_product"
+        "codename": "delete_productcategory"
     }
 },
 {
     "model": "auth.permission",
     "pk": 24,
     "fields": {
-        "name": "Can view Товар",
+        "name": "Can view Категория",
         "content_type": 6,
-        "codename": "view_product"
+        "codename": "view_productcategory"
     }
 },
 {
     "model": "auth.permission",
     "pk": 25,
     "fields": {
-        "name": "Can add Категория",
+        "name": "Can add Товар",
         "content_type": 7,
-        "codename": "add_productcategory"
+        "codename": "add_product"
     }
 },
 {
     "model": "auth.permission",
     "pk": 26,
     "fields": {
-        "name": "Can change Категория",
+        "name": "Can change Товар",
         "content_type": 7,
-        "codename": "change_productcategory"
+        "codename": "change_product"
     }
 },
 {
     "model": "auth.permission",
     "pk": 27,
     "fields": {
-        "name": "Can delete Категория",
+        "name": "Can delete Товар",
         "content_type": 7,
-        "codename": "delete_productcategory"
+        "codename": "delete_product"
     }
 },
 {
     "model": "auth.permission",
     "pk": 28,
     "fields": {
-        "name": "Can view Категория",
+        "name": "Can view Товар",
         "content_type": 7,
-        "codename": "view_productcategory"
+        "codename": "view_product"
     }
 },
 {
     "model": "auth.permission",
     "pk": 29,
+    "fields": {
+        "name": "Can edit category",
+        "content_type": 7,
+        "codename": "can_edit_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can edit description",
+        "content_type": 7,
+        "codename": "can_edit_description"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can edit is_published",
+        "content_type": 7,
+        "codename": "can_edit_is_published"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
     "fields": {
         "name": "Can add Версия",
         "content_type": 8,
@@ -834,7 +315,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 30,
+    "pk": 33,
     "fields": {
         "name": "Can change Версия",
         "content_type": 8,
@@ -843,7 +324,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 31,
+    "pk": 34,
     "fields": {
         "name": "Can delete Версия",
         "content_type": 8,
@@ -852,7 +333,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 32,
+    "pk": 35,
     "fields": {
         "name": "Can view Версия",
         "content_type": 8,
@@ -861,7 +342,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 33,
+    "pk": 36,
     "fields": {
         "name": "Can add Сообщение",
         "content_type": 9,
@@ -870,7 +351,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 34,
+    "pk": 37,
     "fields": {
         "name": "Can change Сообщение",
         "content_type": 9,
@@ -879,7 +360,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 35,
+    "pk": 38,
     "fields": {
         "name": "Can delete Сообщение",
         "content_type": 9,
@@ -888,7 +369,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 36,
+    "pk": 39,
     "fields": {
         "name": "Can view Сообщение",
         "content_type": 9,
@@ -897,7 +378,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 37,
+    "pk": 40,
     "fields": {
         "name": "Can add Студент",
         "content_type": 10,
@@ -906,7 +387,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 38,
+    "pk": 41,
     "fields": {
         "name": "Can change Студент",
         "content_type": 10,
@@ -915,7 +396,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 39,
+    "pk": 42,
     "fields": {
         "name": "Can delete Студент",
         "content_type": 10,
@@ -924,7 +405,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 40,
+    "pk": 43,
     "fields": {
         "name": "Can view Студент",
         "content_type": 10,
@@ -933,7 +414,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 41,
+    "pk": 44,
     "fields": {
         "name": "Can add предмет",
         "content_type": 11,
@@ -942,7 +423,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 42,
+    "pk": 45,
     "fields": {
         "name": "Can change предмет",
         "content_type": 11,
@@ -951,7 +432,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 43,
+    "pk": 46,
     "fields": {
         "name": "Can delete предмет",
         "content_type": 11,
@@ -960,7 +441,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 44,
+    "pk": 47,
     "fields": {
         "name": "Can view предмет",
         "content_type": 11,
@@ -969,7 +450,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 45,
+    "pk": 48,
     "fields": {
         "name": "Can add пользователь",
         "content_type": 12,
@@ -978,7 +459,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 46,
+    "pk": 49,
     "fields": {
         "name": "Can change пользователь",
         "content_type": 12,
@@ -987,7 +468,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 47,
+    "pk": 50,
     "fields": {
         "name": "Can delete пользователь",
         "content_type": 12,
@@ -996,7 +477,7 @@
 },
 {
     "model": "auth.permission",
-    "pk": 48,
+    "pk": 51,
     "fields": {
         "name": "Can view пользователь",
         "content_type": 12,
@@ -1005,38 +486,13 @@
 },
 {
     "model": "auth.group",
-    "pk": 4,
-    "fields": {
-        "name": "default_user",
-        "permissions": [
-            36,
-            24,
-            28,
-            32,
-            40,
-            44
-        ]
-    }
-},
-{
-    "model": "auth.group",
-    "pk": 5,
+    "pk": 1,
     "fields": {
         "name": "moderator",
         "permissions": [
-            22,
-            26
-        ]
-    }
-},
-{
-    "model": "auth.group",
-    "pk": 6,
-    "fields": {
-        "name": "content_manager",
-        "permissions": [
-            34,
-            36
+            29,
+            30,
+            31
         ]
     }
 },
@@ -1085,7 +541,7 @@
     "pk": 6,
     "fields": {
         "app_label": "catalog",
-        "model": "product"
+        "model": "productcategory"
     }
 },
 {
@@ -1093,7 +549,7 @@
     "pk": 7,
     "fields": {
         "app_label": "catalog",
-        "model": "productcategory"
+        "model": "product"
     }
 },
 {
@@ -1138,34 +594,10 @@
 },
 {
     "model": "sessions.session",
-    "pk": "337b2c7w28ydaqvuk0i0h55s7oqbvdst",
+    "pk": "qlewcwispolcq7hbxh29uovhojvxwg6u",
     "fields": {
-        "session_data": ".eJxVjMsOwiAQRf-FtSGFAZlx6b7fQIZHpWogKe3K-O_apAvd3nPOfQnP21r81vPi5yQuQonT7xY4PnLdQbpzvTUZW12XOchdkQftcmwpP6-H-3dQuJdvjRgQEYxl0I5ijJqCAyTHnJMDUKzJEAwJBqWsNgYmSpNxMZPFMxnx_gC7mDam:1sNFrr:xiYgfCxxzvthuu0JgFqEF0ghFGpYVbWnuO3cdOmwRxA",
-        "expire_date": "2024-07-12T17:58:39.127Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "nsburfa9t56l2amctytkso6pltzjm5nc",
-    "fields": {
-        "session_data": ".eJxVjDsOgzAQRO_iOrKwjT-kTM8ZrN31EpNEtoShinL3gESRlDPvzbxFhG3NcWu8xDmJq1Di8tsh0JPLAdIDyr1KqmVdZpSHIk_a5FgTv26n-3eQoeV9zZMzpMEPznp2FgakySMYCsZgSEmRJva2D51yaEBb9NoF7snznkwnPl_27DgC:1sNJDR:DwTUdGknr_w2vJCd-CdZBnwTGDl94d0SwOfycYlAZvQ",
-        "expire_date": "2024-07-12T21:33:09.993Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "s1c590u57df55ton4e8jvt69ofh0lam4",
-    "fields": {
-        "session_data": ".eJxVjMsOwiAQRf-FtSGFAZlx6b7fQIZHpWogKe3K-O_apAvd3nPOfQnP21r81vPi5yQuQonT7xY4PnLdQbpzvTUZW12XOchdkQftcmwpP6-H-3dQuJdvjRgQEYxl0I5ijJqCAyTHnJMDUKzJEAwJBqWsNgYmSpNxMZPFMxnx_gC7mDam:1sNG5N:OsjyP4GkX506o244bUuKo_dgmSIUUTbt-P2QxQBT2SI",
-        "expire_date": "2024-07-12T18:12:37.892Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "x13qeo9i5h6dilpokskfddey2nkj1qlu",
-    "fields": {
-        "session_data": ".eJxVjEEOwiAQRe_C2hAoA4JL9z0DYZhBqoYmpV0Z765NutDtf-_9l4hpW2vcOi9xInERgzj9bpjyg9sO6J7abZZ5busyodwVedAux5n4eT3cv4Oaev3WgTmj0Z50YO18RlCAWhEbXSAYokLeOztYRguQz5AUoUmsQ2EojsT7A_XgOJY:1sNa3b:3wP3pV8jRgOaw9JTRwVb6xZxZCDZ3GDgtlj-1PWMJKA",
-        "expire_date": "2024-07-13T15:32:07.023Z"
+        "session_data": ".eJxVjEEOwiAQRe_C2hAoA4JL9z0DYZhBqoYmpV0Z765NutDtf-_9l4hpW2vcOi9xInERgzj9bpjyg9sO6J7abZZ5busyodwVedAux5n4eT3cv4Oaev3WgTmj0Z50YO18RlCAWhEbXSAYokLeOztYRguQz5AUoUmsQ2EojsT7A_XgOJY:1sNtKp:_i-D0T6q616nQHoKmYpDSSX9XN-x8g1677cef6geSMg",
+        "expire_date": "2024-07-14T12:07:11.450Z"
     }
 },
 {
@@ -1176,9 +608,10 @@
         "description": "Новый смартфон Galaxy S21 с инновационными функциями и улучшенной камерой. Наслаждайтесь высококачественным экраном и производительностью.",
         "price": 70000,
         "image": "images/s21_BBoFPtl.png",
-        "category": 2,
+        "category": null,
         "slug": "smartfon-galaxy-s21",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -1189,9 +622,10 @@
         "description": "Легкий и мощный ноутбук MacBook Air с процессором M1, обеспечивающий высокую производительность и длительное время работы от батареи.",
         "price": 90000,
         "image": "images/macbook_air_2019_review_9_thumb_Y85oVJQ.jpg",
-        "category": 2,
+        "category": null,
         "slug": "noutbuk-macbook-air",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -1202,9 +636,10 @@
         "description": "Беспроводные наушники AirPods Pro с активным шумоподавлением и превосходным качеством звука. Идеальны для прослушивания музыки и звонков.",
         "price": 20000,
         "image": "images/airpods_W2X0iFR.jpg",
-        "category": 1,
+        "category": null,
         "slug": "besprovodnye-naushniki-airpods-pro",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -1215,9 +650,10 @@
         "description": "Смарт-часы Apple Watch Series 6 с функцией измерения уровня кислорода в крови и мониторингом сердечного ритма. Следите за своим здоровьем и активностью.",
         "price": 40000,
         "image": "images/clock_UTCHzSC.png",
-        "category": 1,
+        "category": null,
         "slug": "smart-chasy-apple-watch-series-6",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -1228,9 +664,10 @@
         "description": "Мощный планшет iPad Pro с дисплеем Liquid Retina и процессором M1. Идеален для творчества и работы в движении.",
         "price": 85000,
         "image": "images/ipad_R8TAz9k.png",
-        "category": 2,
+        "category": null,
         "slug": "planshet-ipad-pro",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -1241,9 +678,10 @@
         "description": "Новейшая игровая консоль PlayStation 5 с поддержкой 4K и ультравысокой производительностью. Погрузитесь в мир игр нового поколения.",
         "price": 60000,
         "image": "images/playst5_soWTYwO.png",
-        "category": 2,
+        "category": null,
         "slug": "igrovaia-konsol-playstation-5",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -1254,9 +692,10 @@
         "description": "Фитнес-браслет Xiaomi Mi Band 6 с большим AMOLED-экраном и функциями мониторинга здоровья и фитнеса.",
         "price": 3000,
         "image": "images/mi5_LQTnfoB.png",
-        "category": 1,
+        "category": null,
         "slug": "fitnes-braslet-xiaomi-mi-band-6",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -1267,9 +706,10 @@
         "description": "Умная колонка Яндекс.Станция с голосовым помощником Алиса. Слушайте музыку, управляйте умным домом и получайте ответы на вопросы.",
         "price": 10000,
         "image": "images/алиса_qvwsZH3.png",
-        "category": 2,
+        "category": null,
         "slug": "umnaia-kolonka-iandeks-stantsiia",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -1280,9 +720,10 @@
         "description": "Автоматическая кофемашина DeLonghi Magnifica для приготовления эспрессо и капучино в домашних условиях.",
         "price": 35000,
         "image": "images/113_KkReni_MzGNXlc.png",
-        "category": 4,
+        "category": null,
         "slug": "kofemashina-delonghi-magnifica",
-        "owner": 1
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -1293,75 +734,10 @@
         "description": "Легкий и удобный электросамокат Xiaomi Mi Electric Scooter с дальностью хода до 30 км и максимальной скоростью 25 км/ч.",
         "price": 25000,
         "image": "images/xiaomi-mijia-electric-scooter-1s-4_T9l8jBs.png",
-        "category": 3,
+        "category": null,
         "slug": "elektrosamokat-xiaomi-mi-electric-scooter",
-        "owner": 1
-    }
-},
-{
-    "model": "catalog.product",
-    "pk": 12,
-    "fields": {
-        "name": "компьютер",
-        "description": "мой пк",
-        "price": 100000,
-        "image": "images/scale_1200_J2CVE1i.png",
-        "category": null,
-        "slug": "kompiuter",
-        "owner": 1
-    }
-},
-{
-    "model": "catalog.product",
-    "pk": 13,
-    "fields": {
-        "name": "книги",
-        "description": "нет учебники",
-        "price": 10000,
-        "image": "images/hggdyy_l9aWD1N.png",
-        "category": null,
-        "slug": "knigi",
-        "owner": 3
-    }
-},
-{
-    "model": "catalog.productcategory",
-    "pk": 1,
-    "fields": {
-        "name": "аксессуар",
-        "description": "товар который подходит под категорию аксессуаров"
-    }
-},
-{
-    "model": "catalog.productcategory",
-    "pk": 2,
-    "fields": {
-        "name": "Электроника",
-        "description": "товар который подходит под категорию электроники"
-    }
-},
-{
-    "model": "catalog.productcategory",
-    "pk": 3,
-    "fields": {
-        "name": "транспорт",
-        "description": "товар который подходит под категорию транспорта"
-    }
-},
-{
-    "model": "catalog.productcategory",
-    "pk": 4,
-    "fields": {
-        "name": "оборудование",
-        "description": "товар который подходит под категорию оборудования"
-    }
-},
-{
-    "model": "catalog.productcategory",
-    "pk": 5,
-    "fields": {
-        "name": "литература",
-        "description": "товар который подходит под категорию литературы"
+        "owner": 1,
+        "is_published": true
     }
 },
 {
@@ -1526,33 +902,15 @@
     }
 },
 {
-    "model": "students.subject",
-    "pk": 1,
-    "fields": {
-        "title": "биология",
-        "description": "занятия биологией",
-        "student": 1
-    }
-},
-{
-    "model": "students.subject",
-    "pk": 2,
-    "fields": {
-        "title": "информатика",
-        "description": "занятия программированием",
-        "student": 1
-    }
-},
-{
     "model": "users.user",
     "pk": 1,
     "fields": {
-        "password": "pbkdf2_sha256$720000$098HPnAvtZhLDW4JifsCYL$lzfoS6K8a9MxY/v9MxGYZZ2+GVDd91TGNB0ztvsodv8=",
-        "last_login": "2024-06-29T12:04:20.209Z",
+        "password": "pbkdf2_sha256$720000$5IFzcdjzdAWPpyUCyGPl3t$Go4o2rAlHMUYeZt971jOBqnYPDKhRuIkFqfqrglf3xQ=",
+        "last_login": "2024-06-28T16:41:47Z",
         "is_superuser": false,
         "first_name": "",
         "last_name": "",
-        "is_staff": true,
+        "is_staff": false,
         "is_active": true,
         "date_joined": "2024-06-28T15:52:10Z",
         "email": "folmerpetr21@gmail.com",
@@ -1561,9 +919,7 @@
         "country": null,
         "token": "afa2ec7c785d8ff6b4f02d36edea8ebf",
         "groups": [
-            4,
-            5,
-            6
+            1
         ],
         "user_permissions": []
     }
@@ -1573,7 +929,7 @@
     "pk": 2,
     "fields": {
         "password": "pbkdf2_sha256$720000$Er6qLJtIHjW5K1ZUfXU8CG$5k5/oDJUHB2fTien2+ehvXE0VNwGea3A5ZyuMY7Ocr4=",
-        "last_login": "2024-06-29T15:32:07.020Z",
+        "last_login": "2024-06-30T12:07:11.447Z",
         "is_superuser": true,
         "first_name": "Admin",
         "last_name": "SkyPro",
@@ -1586,29 +942,6 @@
         "country": null,
         "token": null,
         "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "users.user",
-    "pk": 3,
-    "fields": {
-        "password": "pbkdf2_sha256$720000$dDc8isKKVw3yFk1YdWlOHE$ynQ5WiQcVpYny894pisjO7DAnKjIEH1QLOYTU/a8vgg=",
-        "last_login": "2024-06-29T15:30:49.474Z",
-        "is_superuser": false,
-        "first_name": "",
-        "last_name": "",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2024-06-28T18:14:19Z",
-        "email": "folmerpetr31@gmail.com",
-        "phone": null,
-        "avatar": "",
-        "country": null,
-        "token": "d97117977bd3887f6f6a80b56ec9d04f",
-        "groups": [
-            4
-        ],
         "user_permissions": []
     }
 }
