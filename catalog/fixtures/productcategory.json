@@ -1,2 +1,10 @@
 [
+{
+    "model": "catalog.productcategory",
+    "pk": 1,
+    "fields": {
+        "name": "Электроника",
+        "description": "товар который подходит под категорию электроники"
+    }
+}
 ]
