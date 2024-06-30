@@ -26,7 +26,7 @@
                         <button class="btn btn-danger float-right ml-2">Удалить &#128465;</button>
                     </a>
                     {% endif %}
-                    {% if perms.catalog.change_product or user == product.owner or user.is_superuser %}
+                    {% if perms.catalog.can_edit_category or user == product.owner or user.is_superuser %}
                     <a href="{% url 'product_form' slug=product.slug %}">
                         <button class="btn btn-dark float-right">Редактировать &#9998;</button>
                     </a>

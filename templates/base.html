@@ -111,9 +111,9 @@
             {% endif %}
             <div class="logout-btn">
                 {% if user.is_authenticated %}
-                <form action="{% url 'users:logout' %}" method="post">
+                <a href="{% url 'users:profile' %}" class="btn">Профиль</a>
+                <form action="{% url 'users:logout' %}" method="post" style="display: inline;">
                     {% csrf_token %}
-                    <a href="{% url 'users:profile' %}" class="btn">Профиль</a>
                     <button type="submit" class="btn">Выйти</button>
                 </form>
                 {% else %}
