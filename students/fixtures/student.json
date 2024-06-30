@@ -1,14 +1,46 @@
 [
 {
-    "model": "auth.group",
+    "model": "students.student",
     "pk": 1,
     "fields": {
-        "name": "moderator",
-        "permissions": [
-            29,
-            30,
-            31
-        ]
+        "name": "Иван",
+        "surname": "Иванов",
+        "age": 20,
+        "slug": "ivan",
+        "email": null
+    }
+},
+{
+    "model": "students.student",
+    "pk": 2,
+    "fields": {
+        "name": "Анна",
+        "surname": "Смирнова",
+        "age": 23,
+        "slug": "anna",
+        "email": null
+    }
+},
+{
+    "model": "students.student",
+    "pk": 3,
+    "fields": {
+        "name": "Елена",
+        "surname": "Николаева",
+        "age": 19,
+        "slug": "elena",
+        "email": null
+    }
+},
+{
+    "model": "students.student",
+    "pk": 4,
+    "fields": {
+        "name": "Мария",
+        "surname": "Федорова",
+        "age": 20,
+        "slug": "mariia",
+        "email": null
     }
 }
 ]
