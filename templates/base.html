@@ -133,9 +133,12 @@
     <div class="dropdown-menu">
         {% if user.is_authenticated %}
         <a href="{% url 'product_create' %}" class="dropdown-item">Товар</a>
-        {% endif %}
         <a href="{% url 'message_create' %}" class="dropdown-item">Сообщение</a>
+        {% if perms.students.add_student  %} // Проверка на разрешение добавления студента
         <a href="{% url 'student_create' %}" class="dropdown-item">Студент</a>
+        {% endif %}
+        {% endif %}
+
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

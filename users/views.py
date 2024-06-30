@@ -13,12 +13,12 @@ from django.conf import settings
 from .models import User
 
 
-class UserCreateView(PermissionRequiredMixin, CreateView):
+class UserCreateView(CreateView):
     model = User
     form_class = UserRegisterForm
     template_name = 'users/register.html'
     success_url = reverse_lazy('users:login')
-    permission_required = 'users.add_user'
+    # permission_required = 'users.add_user'
 
     def form_valid(self, form):
         # Сохраняем пользователя, но не коммитим его в базу данных
@@ -26,7 +26,7 @@ class UserCreateView(PermissionRequiredMixin, CreateView):
         user.is_active = False
         token = secrets.token_hex(16)
         user.token = token
-        user.save(update_fields=['token','is_active'])
+        user.save() # update_fields=['token','is_active']
         host = self.request.get_host()
         url = f'http://{host}/users/email-confirm/{token}'
         # Отправляем письмо для верификации

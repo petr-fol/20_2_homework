@@ -15,9 +15,7 @@
                         {{ form.as_p }}
                     </div>
                     <div class="card-footer">
-                        {% if perms.students.change_student or user == product.owner or user.is_superuser %}
                         <button type="submit" class="btn btn-primary">Сохранить</button>
-                        {% endif %}
                     </div>
                 </div>
             </div>
