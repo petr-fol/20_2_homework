@@ -13,10 +13,17 @@ class Product(models.Model):
     slug = models.SlugField(max_length=200, unique=True, db_index=True, verbose_name='URL')
     owner = models.ForeignKey('users.User', on_delete=models.SET_NULL, verbose_name='Владелец',
                               help_text='создатель товара', null=True, blank=True)
+    is_published = models.BooleanField(default=True, verbose_name='Опубликовано')
 
     class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
+
+        permissions = [
+            ("can_edit_category", "Can edit category"),
+            ("can_edit_description", "Can edit description"),
+            ("can_edit_is_published", "Can edit is_published"),
+        ]
 
     def save(self, *args, **kwargs):
         if not self.slug:
