@@ -12,11 +12,11 @@ class Command(BaseCommand):
             ('catalog.ProductCategory', 'catalog/fixtures/productcategory.json'),
             ('blog.Message', 'blog/fixtures/message.json'),
             ('students.Student', 'students/fixtures/student.json'),
-            ('users.User', 'users/fixtures/user.json'),
+            # ('users.User', 'users/fixtures/user.json'),
         ]
 
         for model, fixture in fixtures:
-                call_command('dumpdatautf8', model, indent=4, output=fixture)
+            call_command('dumpdatautf8', model, indent=4, output=fixture)
 
         call_command('dumpdatautf8', indent=4, output='data.json')
 
