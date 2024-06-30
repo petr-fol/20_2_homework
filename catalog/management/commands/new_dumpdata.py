@@ -12,7 +12,7 @@ class Command(BaseCommand):
             ('catalog.ProductCategory', 'catalog/fixtures/productcategory.json'),
             ('blog.Message', 'blog/fixtures/message.json'),
             ('students.Student', 'students/fixtures/student.json'),
-            ('auth.Group', 'students/fixtures/student.json'),
+            ('auth.Group', 'groups.json'),
             # ('users.User', 'users/fixtures/user.json'),
         ]
 
