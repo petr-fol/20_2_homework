@@ -11,5 +11,6 @@ class Command(BaseCommand):
         call_command('loaddata', 'catalog/fixtures/productcategory.json')
         call_command('loaddata', 'blog/fixtures/message.json')
         call_command('loaddata', 'students/fixtures/student.json')
+        call_command('loaddata', 'groups.json')
         # call_command('loaddata', 'users/fixtures/user.json')
         self.stdout.write(self.style.SUCCESS('база данных успешно заполнена'))
