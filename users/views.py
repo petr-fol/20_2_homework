@@ -43,11 +43,11 @@ class UserCreateView(CreateView):
         return super().form_valid(form)
 
 
-class UserUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
+class UserUpdateView(LoginRequiredMixin, UpdateView):
     model = User
     form_class = UserProfileForm
     success_url = reverse_lazy('users:profile')
-    permission_required = 'users.change_user'
+    # permission_required = 'users.change_user'
 
     def get_object(self, queryset=None):
         return self.request.user
