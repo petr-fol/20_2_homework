@@ -7,5 +7,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         call_command('loaddata', 'catalog/fixtures/product.json')
-        call_command('loaddata', 'catalog/fixtures/version.json')
+        call_command('loaddata', 'catalog/fixtures/productversion.json')
+        call_command('loaddata', 'catalog/fixtures/productcategory.json')
+        call_command('loaddata', 'blog/fixtures/message.json')
+        call_command('loaddata', 'students/fixtures/student.json')
+        call_command('loaddata', 'users/fixtures/user.json')
         self.stdout.write(self.style.SUCCESS('база данных успешно заполнена'))
