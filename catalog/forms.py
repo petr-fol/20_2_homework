@@ -37,10 +37,16 @@ class ProductForm(StyleFormMixin, forms.ModelForm):
         return price
 
 
-class VersionForm(forms.ModelForm):
+class ProductModeratorForm(StyleFormMixin, forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = ('is_published', 'description', 'category')
+
+
+class VersionForm(StyleFormMixin, forms.ModelForm):
     class Meta:
         model = ProductVersion
-        fields = ['number_of_version', 'current_version']
+        fields = ('number_of_version', 'current_version')
 
     def clean_current_version(self):
         current_version = self.cleaned_data.get('current_version')
