@@ -163,3 +163,5 @@ blog/migrations
 catalog/migrations
 users/migrations
 students/migrations
+
+.idea
